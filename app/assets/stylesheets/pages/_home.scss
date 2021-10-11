@@ -1,0 +1,90 @@
+// Specific CSS for your home-page
+.subtitle-homepage {
+  margin-top: 60px;
+}
+
+.homepage-cards{
+  border-radius: 8px;
+  margin: 20px;
+  background-color:rgb(255, 255, 255);
+  box-shadow: 2px 2px 3px rgb(206, 206, 206);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90px;
+  text-decoration: none;
+  a {
+    color: black;
+  }
+  h5 {
+  margin-left: 15px;
+}
+}
+
+.homepage-cards:hover {
+  box-shadow:  2px 2px 3px rgb(145, 145, 145);
+}
+
+.country-cards-padre {
+    display: grid;
+    grid-gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.mini-banner-homepage {
+  background-size: cover;
+  background-position: center;
+  margin-top: 60px;
+}
+
+.promotion-banner-capitan {
+  position: relative;
+  top: 110px;
+  left: 50px;
+}
+.promotion-banner-capitan {
+  h5 {
+    font-weight: bold;
+    font-size: 30px;
+  }
+  p {
+    font-weight: lighter;
+  }
+
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .country-cards-padre {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .country-cards-padre {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .country-cards-padre {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .country-cards-padre {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .country-cards-padre {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

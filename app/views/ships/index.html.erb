@@ -1,0 +1,53 @@
+
+<div class="d-flex">
+  <div class="col-3 mt-5 bg-white h-100 pt-5 pb-5 sticky-top ">
+    <%= simple_form_for :ship, url: ships_path, :method => "get",:class => "form-group" do |f| %>
+    <div class="row">
+      <div class="col">
+        <%= f.input :max_people, :class => "form-control"%>
+      </div>
+      <div class="col">
+        <%= f.input :price, :class => "form-control"%>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <%= f.input :ship_type, :class => "form-control",collection: Ship::TYPES %>
+      </div>
+      <div class="col">
+        <%= f.input :name, :class => "form-control"%>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    </div>
+
+    <% end %>
+  </div>
+  <div class="col-1"></div>
+  <div class="col-6">
+  <%@ships.each do |ship|  %>
+
+    <div class="ship-card mt-3">
+      <%= link_to ship_path(ship) do %>
+      <%= cl_image_tag ship.images.first.key, class: "ml-0" %>
+      <div class="card-ship-info">
+        <h2 class><%= ship.name.capitalize %></h2>
+        <hr>
+        <p><strong>Max people:</strong> <%= ship.max_people %></p>
+        <p><strong>Type:</strong> <%= ship.ship_type %></p></a>
+        <div class="heart-icon">
+          <i class="far fa-heart"></i>
+        </div>
+        <div class="price">
+          <p><strong>$</strong><%= ship.price %> </p>
+        </div>
+      </div>
+      <% end %>
+    </div>
+
+  <% end %>
+
+  </div>
+</div>

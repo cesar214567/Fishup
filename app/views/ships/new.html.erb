@@ -1,0 +1,21 @@
+<div class="d-flex justify-content-center">
+  <div class="col-6">
+    <%= simple_form_for @ship, :class => "form-group" do |f| %>
+      <%= f.input :max_people, :class => "form-control"%>
+      <%= f.input :price, :class => "form-control"%>
+      <%= f.input :ship_type, :class => "form-control", collection: Ship::TYPES%>
+      <%= f.input :latitude, :class => "form-control", as: :hidden %>
+      <%= f.input :longitude, :class => "form-control", as: :hidden%>
+      <%= f.input :name, :class => "form-control"%>
+      <%= f.input :description, :class => "form-control"%>
+      <p>escoja la direccion donde se encuentra su barco </p>
+      <div id="map" class="mb-4"
+        style="width: 100%; height: 600px;"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+      <%= f.input :images, :input_html => { :multiple => true } %>
+      <%= f.submit "Submit Ship", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
+</div>
