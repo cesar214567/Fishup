@@ -1,8 +1,12 @@
 class SpotsController < ApplicationController
   def index
+    @spots = Spot.all
   end
 
   def show
+    @spot = Spot.find(params[:id])
+    @spot_images = @spot.images.all
+    @posts = Post.new
   end
 
   def new
@@ -11,7 +15,13 @@ class SpotsController < ApplicationController
 
   def create
     @spot = Spot.new(spot_params)
-
+    @user = current_user
+    @spot.user = @user
+    if @spot.save
+      redirect_to spot_path(@spot)
+    else
+      render :new
+    end
   end
 
   private
