@@ -1,1 +1,27 @@
 <h1>catches</h1>
+
+<% @catches.each do |catch| %>
+<div class="container">
+   <div class="wrapper">
+    <div class="product-img">
+       <%= cl_image_tag(catch.images.first.key, :cloud_name => "dknqzlcaq", height: 150, width:200, crop: "scale") %>
+    </div>
+    <div class="product-info">
+      <div class="product-text">
+        <h1> <%= catch.name %> </h1>
+        <h2>scientific name <%= catch.scientific_name %></h2>
+        <p> <strong>description</strong><%= catch.description %> </p>
+      </div>
+      <div class="product-price-btn">
+        <button type="button">validate</button>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
+
+
+
+
+
