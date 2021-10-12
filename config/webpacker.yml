@@ -25,7 +25,12 @@ default: &default
     - .gif
     - .tiff
     - .ico
-    - .svg3000
+    - .svg
+    - .eot
+    - .otf
+    - .ttf
+    - .woff
+    - .woff2
 
   extensions:
     - .mjs
@@ -81,7 +86,7 @@ production:
   compile: false
 
   # Extract and emit a css file
-  extract_css: false
+  extract_css: true
 
   # Cache manifest.json for performance
   cache_manifest: true
