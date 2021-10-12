@@ -10,15 +10,26 @@ require 'open-uri'
 puts "deleting previous db"
 puts "creating catches"
 
-Catch.create!(name: "Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
+catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
+fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
+catch1.images.attach({io:fishpic1, filename: 'redfish', content_type:'image/png'})
 
-Catch.create!(name: "Bigeye Tuna" , description:"Bigeye tuna are dark metallic blue on the back and upper sides and white on the lower sides and belly.", habitat: "Bigeye tuna are a highly migratory species, swimming long distances throughout the ocean.", scientific_name:"Thunnus obesus", maximum_size: 6, minimum_size:5.5)
 
-Catch.create!(name: "Atlantic Chub Mackerel" , description:"They are silvery in color, with greenish-blue backs. The upper surfaces have dark zigzagging stripes, and the bellies are pale and marked with wavy lines.", habitat: "Western Atlantic Ocean range from Nova Scotia (where they are rare) through Argentina, including the Gulf of Mexico.  ", scientific_name:"Scomber colias", maximum_size: 22 , minimum_size: 18)
+catch2 = Catch.create!(name: "Bigeye Tuna" , description:"Bigeye tuna are dark metallic blue on the back and upper sides and white on the lower sides and belly.", habitat: "Bigeye tuna are a highly migratory species, swimming long distances throughout the ocean.", scientific_name:"Thunnus obesus", maximum_size: 6, minimum_size:5.5)
+fishpic2 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_bigeye_tuna.png')
+catch2.images.attach({io:fishpic2, filename:"bigeye tuna", content_type:'image/png'})
 
-Catch.create!(name: "Atlantic Common Thresher Shark" , description:"Their pectoral, pelvic, and dorsal fins are blackish, and there are sometimes white dots on the tips of the pectoral, pelvic, and tail fins.", habitat: "In the northwest Atlantic Ocean, they range from Newfoundland to Cuba.", scientific_name:"Alopias vulpinus", maximum_size:20 , minimum_size:18)
+catch3 = Catch.create!(name: "Atlantic Chub Mackerel" , description:"They are silvery in color, with greenish-blue backs. The upper surfaces have dark zigzagging stripes, and the bellies are pale and marked with wavy lines.", habitat: "Western Atlantic Ocean range from Nova Scotia (where they are rare) through Argentina, including the Gulf of Mexico.  ", scientific_name:"Scomber colias", maximum_size: 22 , minimum_size: 18)
+fishpic3 = URI.open('https://www.fishwatch.gov/sites/default/files/Atlantic-chub-mackerel-FNL_NB_W.png')
+catch3.images.attach(io: fishpic3, filename:'Atlantic Chub Mackerel', content_type: 'image/png')
 
-Catch.create!(name: "Atlantic Mahi Mahi" , description:"Brightly colored back is an electric greenish blue, lower body is gold or sparkling silver, and sides have a mixture of dark and light spots.", habitat: "Mahi mahi are found in the Atlantic, Gulf of Mexico, and Caribbean, and are caught from Massachusetts to Texas.", scientific_name:"Coryphaena hippurus", maximum_size:7 , minimum_size:6.5)
+catch4 = Catch.create!(name: "Atlantic Common Thresher Shark" , description:"Their pectoral, pelvic, and dorsal fins are blackish, and there are sometimes white dots on the tips of the pectoral, pelvic, and tail fins.", habitat: "In the northwest Atlantic Ocean, they range from Newfoundland to Cuba.", scientific_name:"Alopias vulpinus", maximum_size:20 , minimum_size:18)
+fishpic4 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_common_thresher_shark_0.png')
+catch4.images.attach({io:fishpic4, filename:'Atlantic Common Thresher Shark', content_type: 'image/png'})
+
+catch5 = Catch.create!(name: "Atlantic Mahi Mahi" , description:"Brightly colored back is an electric greenish blue, lower body is gold or sparkling silver, and sides have a mixture of dark and light spots.", habitat: "Mahi mahi are found in the Atlantic, Gulf of Mexico, and Caribbean, and are caught from Massachusetts to Texas.", scientific_name:"Coryphaena hippurus", maximum_size:7 , minimum_size:6.5)
+fishpic5 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_mahimahi_dolphinfish_0.png')
+catch5.images.attach({io: fishpic5, filename:'Atlantic Mahi Mahi',content_type:'image/png'})
 
 #
 #user1 = User.create!(email:'owner1@gmail.com', password:'123456789', ssn:Faker::IDNumber.valid, first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', owner: true, country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new, gender: "male")

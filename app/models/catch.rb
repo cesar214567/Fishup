@@ -4,4 +4,5 @@ class Catch < ApplicationRecord
   validates :name, :description, :habitat, :scientific_name, :maximum_size, :minimum_size, presence: true
   has_many :bait_catches
   has_many :baits, through: :bait_catches
+  has_many_attached :images
 end
