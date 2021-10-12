@@ -4,7 +4,8 @@ class BaitsController < ApplicationController
   end
 
   def show
-    @bait = policy_scope(Bait).find(params[:id])
+    @bait = Bait.find(params[:id])
+    authorize @bait
   end
 
   private
