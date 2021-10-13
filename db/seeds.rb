@@ -7,9 +7,30 @@ require 'open-uri'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-#puts "deleting previous db"
+puts "deleting previous db"
+puts "creating catches"
 
-#puts "creating users"
+catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
+fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
+catch1.images.attach({io:fishpic1, filename: 'redfish', content_type:'image/png'})
+
+
+catch2 = Catch.create!(name: "Bigeye Tuna" , description:"Bigeye tuna are dark metallic blue on the back and upper sides and white on the lower sides and belly.", habitat: "Bigeye tuna are a highly migratory species, swimming long distances throughout the ocean.", scientific_name:"Thunnus obesus", maximum_size: 6, minimum_size:5.5)
+fishpic2 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_bigeye_tuna.png')
+catch2.images.attach({io:fishpic2, filename:"bigeye tuna", content_type:'image/png'})
+
+catch3 = Catch.create!(name: "Atlantic Chub Mackerel" , description:"They are silvery in color, with greenish-blue backs. The upper surfaces have dark zigzagging stripes, and the bellies are pale and marked with wavy lines.", habitat: "Western Atlantic Ocean range from Nova Scotia (where they are rare) through Argentina, including the Gulf of Mexico.  ", scientific_name:"Scomber colias", maximum_size: 22 , minimum_size: 18)
+fishpic3 = URI.open('https://www.fishwatch.gov/sites/default/files/Atlantic-chub-mackerel-FNL_NB_W.png')
+catch3.images.attach(io: fishpic3, filename:'Atlantic Chub Mackerel', content_type: 'image/png')
+
+catch4 = Catch.create!(name: "Atlantic Common Thresher Shark" , description:"Their pectoral, pelvic, and dorsal fins are blackish, and there are sometimes white dots on the tips of the pectoral, pelvic, and tail fins.", habitat: "In the northwest Atlantic Ocean, they range from Newfoundland to Cuba.", scientific_name:"Alopias vulpinus", maximum_size:20 , minimum_size:18)
+fishpic4 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_common_thresher_shark_0.png')
+catch4.images.attach({io:fishpic4, filename:'Atlantic Common Thresher Shark', content_type: 'image/png'})
+
+catch5 = Catch.create!(name: "Atlantic Mahi Mahi" , description:"Brightly colored back is an electric greenish blue, lower body is gold or sparkling silver, and sides have a mixture of dark and light spots.", habitat: "Mahi mahi are found in the Atlantic, Gulf of Mexico, and Caribbean, and are caught from Massachusetts to Texas.", scientific_name:"Coryphaena hippurus", maximum_size:7 , minimum_size:6.5)
+fishpic5 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_mahimahi_dolphinfish_0.png')
+catch5.images.attach({io: fishpic5, filename:'Atlantic Mahi Mahi',content_type:'image/png'})
+
 #
 user1 = User.create!(email:'camgcamg11@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516',  country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new)
 user1_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
@@ -30,19 +51,6 @@ bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: 
 bait1_image = URI.open("https://source.unsplash.com/120x120/?worm
 ")
 bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
-
-catch1 = Catch.create!(name:"tramboyo",description:"Suele ser un pez de rocas, cuerpo recubierto de escamas cicloideas, pocas especies sin escamas; la aleta dorsal tienen más espinas que radios blandos, algunas especies incluso sólo tienen espinas en esta aleta",habitat:"Estan distribuidos por el atlantico y pacifico", scientific_name:"Auchenionchus microcirrhis",minimum_size: 15,maximum_size:30)
-catch1_image = URI.open("http://tumi.lamolina.edu.pe/infopes/wp-content/uploads/2018/05/Tramboyo-.jpg")
-catch1.image.attach({io:catch1_image, filename:'catch1', content_type:'image/png'})
-
-
-catch2 = Catch.create!(name:"pejerrey",description:"El pejerrey es un pez de cuerpo largado, comprimido lateralmente, con pedúnculo caudal largo y bajo. De perfil dorsal más o menos recto, con hocico puntiagudo. Su dorso de color verde oliváceo presenta una banda longitudinal plateada sobre los flancos, con una línea azul reflectante en su reborde superior. La aleta caudal es amarilla, marginado con negro, aletas dorsales y pectorales (región dorsal) suavemente punteadas, aletas pélvicas y anal traslúcidas e incoloras. Presenta escamas cicloides pequeñas que cubren todo el cuerpo, sin invadir las aletas, a excepción de la base de la caudal. Línea lateral discontinua, con escamas acanaladas distribuidas en forma irregular",habitat:"Habita en el subsistema pelágico nerítico sobre fondos arenosos, con vegetación y desembocadura de ríos. Los individuos juveniles se distribuyen en zonas cercanas al mar abierto", scientific_name:"Odontesthes regia",minimum_size: 14,maximum_size:25)
-catch2_image = URI.open("http://tumi.lamolina.edu.pe/infopes/wp-content/uploads/2018/05/Tramboyo-.jpg")
-catch2.image.attach({io:catch2_image, filename:'catch2', content_type:'image/png'})
-
-catch3 = Catch.create!(name:"chita",description:"Pez de boca pequeña con labios gruesos y dientes en la mandíbula, normalmente con amplios poros en la barbilla y siete hendiduras branquiales. Los ejemplares adultos de chita presentan el cuerpo alto y robusto, perfil de cabeza convexa y boca pequeña baja y terminal. Sus escamas son grandes y presentan manchas oscuras en sus márgenes anteriores, dando la apariencia de bandas oblicuas.",habitat:"Especie costera asociada a zonas rocosas y arenosas", scientific_name:"Anisotremus scapularis",minimum_size: 24,maximum_size:55)
-catch3_image = URI.open("http://tumi.lamolina.edu.pe/infopes/wp-content/uploads/2018/05/Tramboyo-.jpg")
-catch3.image.attach({io:catch3_image, filename:'catch3', content_type:'image/png'})
 
 bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
 bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
