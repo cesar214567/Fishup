@@ -1,0 +1,11 @@
+<div class="catch-card mb-3">
+  <div class="fish-image">
+    <%= cl_image_tag(catch.images.key, :cloud_name => "dknqzlcaq") %>
+  </div>
+  <div class="catch-info">
+    <h1> <%= catch.name %></h1>
+    <h2>Scientific name: <%= catch.scientific_name %></h2>
+    <p><strong>Description:</strong><%= catch.description %></p>
+    <p>Habitat: <%= catch.habitat %></p>
+  </div>
+</div>

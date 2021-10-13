@@ -32,20 +32,20 @@ fishpic5 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_mahi
 catch5.images.attach({io: fishpic5, filename:'Atlantic Mahi Mahi',content_type:'image/png'})
 
 #
-#user1 = User.create!(email:'owner1@gmail.com', password:'123456789', ssn:Faker::IDNumber.valid, first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', owner: true, country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new, gender: "male")
-#user1_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user1.avatar.attach({io:user1_avatar, filename:'avatar1', content_type:'image/png'})
-#
-#user2 = User.create!(email:'user1@gmail.com', password:'123456789', ssn:Faker::IDNumber.valid, first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', owner: false, country:'Peru', city: 'Lima', address:'miraflores', birth_date: Date.new, gender: "male")
-#user2_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user2.avatar.attach({io:user2_avatar, filename:'avatar2', content_type:'image/png'})
-#
-#user3 = User.create!(email:Faker::Internet.email, password:'123456789', ssn:Faker::IDNumber.valid, first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', owner: false, country:'Peru', city: 'Lima', address:'barranco', birth_date: Date.new, gender: "male")
-#user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
+user1 = User.create!(email:'camgcamg11@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516',  country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new)
+user1_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user1.avatar.attach({io:user1_avatar, filename:'avatar1', content_type:'image/png'})
+
+user2 = User.create!(email:'eduardo@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'miraflores', birth_date: Date.new)
+user2_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user2.avatar.attach({io:user2_avatar, filename:'avatar2', content_type:'image/png'})
+
+user3 = User.create!(email:"felipe@gmail.com", password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'barranco', birth_date: Date.new)
+user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
 #
 #user4 = User.create!(email:Faker::Internet.email, password:'123456789', ssn:Faker::IDNumber.valid, first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', owner: false, country:'Peru', city: 'Lima', address:'Jesus maria', birth_date: Date.new, gender: "female")
 #user4_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
