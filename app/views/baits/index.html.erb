@@ -1,6 +1,6 @@
 
 <div class="d-flex">
-  <!--
+
   <div class="col-3 mt-5 bg-white h-100 pt-5 pb-5 sticky-top ">
     <%= simple_form_for :bait, url: baits_path, :method => "get",:class => "form-group" do |f| %>
     <div class="row">
@@ -26,7 +26,7 @@
 
     <% end %>
   </div>
-  -->
+
   <div class="col-1"></div>
   <div class="col-6">
   <%@baits.each do |bait|  %>
@@ -41,10 +41,6 @@
         <hr>
         <p><strong>Cost:</strong> <%= bait.cost %></p>
         <p><strong>Description:</strong> <%= bait.description %></p></a>
-        <div class="heart-icon">
-          <i class="far fa-heart"></i>
-        </div>
-
       </div>
       <% end %>
     </div>
