@@ -1,6 +1,13 @@
 class SpotsController < ApplicationController
   def index
     @spots = policy_scope(Spot)
+    @markers = @spots.map do |spot|
+      {
+        lat: spot.latitude,
+        lng: spot.longitude,
+        info_window: render_to_string(partial: "shared/info_window", locals: { spot: spot })
+      }
+    end
   end
 
   def show

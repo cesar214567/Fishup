@@ -23,9 +23,12 @@ ActiveStorage.start()
 // External imports
 import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
+import { initMapbox1 } from "../plugins/spot_mapbox";
+
 
 
 document.addEventListener('turbolinks:load', () => {
+  initMapbox1();
   initMapbox();
 });
 const cities = document.getElementById("user_city");
