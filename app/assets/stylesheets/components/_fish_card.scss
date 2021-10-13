@@ -1,11 +1,30 @@
+a:link {
+	text-decoration: none;
+}
 .catch-card {
-	overflow: hidden;
+	margin: 0 25px;
 	height: 200px;
 	background: white;
 	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	display: flex;
 	align-items: center;
 	font-family: "Raleway", sans-serif;
+	position: relative;
+	color: black;
+	.anotation {
+		width: 25px;
+		height: 25px;
+		background-color: #0f4271;
+		border-radius: 50%;
+		position: absolute;
+		top: -10px;
+		right: -10px;
+		color: white;
+		font-weight: 600;
+		p {
+			text-align: center;
+		}
+	}
 	img {
 		height: 95%;
 		width: 100%;

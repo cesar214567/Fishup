@@ -10,6 +10,8 @@ require 'open-uri'
 puts "deleting previous db"
 puts "creating catches"
 
+User.create!(email:'user1@gmail.com', first_name:'user', last_name:'number1', phone_number:'123456789', country:'ecuador', city:'guayaquil', password: '123456789', address: 'en mi casa', birth_date: Time.now)
+
 catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
 fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
 catch1.image.attach({io:fishpic1, filename: 'redfish', content_type:'image/png'})

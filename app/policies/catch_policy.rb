@@ -6,7 +6,7 @@ class CatchPolicy < ApplicationPolicy
   end
 
   def show?
-    false
+    true
   end
 
   def create?
