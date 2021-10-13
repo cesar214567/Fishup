@@ -6,7 +6,7 @@
         <h1><strong><%=  @bait.name.capitalize %></strong></h1>
         <%= cl_image_tag @bait.image.key, class: "ml-0" %>
       </div>
-      <div class="col">
+      <div class="col mt-5 text-white">
         <div>
           <h2 class>Description</h2>
           <hr>
@@ -24,12 +24,12 @@
 </div>
 <div class="container">
   <div>
-    <h2 class>Possible Catches</h2>
+    <h2 class="mt-3">Possible Catches</h2>
     <hr>
-    <%= render 'shared/horizontal_scrollbar' , :array => @bait.catches %>
+    <%= render 'shared/vertical_scrollbar' , :array => @bait.catches %>
   </div>
   <div>
-    <h2 class>Spots</h2>
+    <h2 class="mb-3">Spots</h2>
     <hr>
     <%= render 'shared/horizontal_scrollbar' , :array => Spot.from_bait_id(@bait.id) %>
   </div>

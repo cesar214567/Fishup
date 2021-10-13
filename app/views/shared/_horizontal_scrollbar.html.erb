@@ -3,19 +3,11 @@
     <div class="list">
       <% array.each do |element| %>
         <div class="card-trip inline">
-          <% unless element.is_a? Spot   %>
-            <%= cl_image_tag element.image.key, class: "ml-0" %>
-          <% else %>
-            <!-- aqui va el mapa-->
-          <% end %>
+            <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{element.longitude},#{element.latitude},14.25,0,60/600x600?access_token=#{ENV['MAPBOX_API_KEY']}" %>
           <div class="card-trip-infos ">
             <div class="text-center">
-              <% unless element.is_a? Post %>
                 <h2><%= element.name %></h2>
                 <p><%= element.description %></p>
-              <% else %>
-
-              <% end %>
             </div>
           </div>
 
