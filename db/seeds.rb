@@ -60,5 +60,8 @@ bait_catc3 = BaitCatch.create!(bait:Bait.first,catch:Catch.third)
 
 spot1 = Spot.create!(name: "muelle de chorrillos",description: "lugar para obtener carnada y pescar pejerreyes.",latitude: -12.164645558675222, longitude:-77.0299903674119)
 catch_spot1 = CatchSpot.create!(spot:spot1,catch:Catch.first,rarity:"Common")
+spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
+spot1.images.attach({io:spot_image, filename:'image_spots', content_type:'image/png'})
+
 
 puts "all done!"
