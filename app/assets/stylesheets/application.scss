@@ -10,10 +10,9 @@
 
 // Your CSS partials
 @import "components/index";
-@import "components/ship_card";
 @import "pages/index";
 @import "pages/show";
 
 .rounded {
-  border-radius: 5% !important;
+	border-radius: 5% !important;
 }
