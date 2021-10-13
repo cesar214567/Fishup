@@ -1,6 +1,6 @@
 class SpotsController < ApplicationController
   def index
-    @spots = Spot.all
+    @spots = policy_scope(Spot)
   end
 
   def show
