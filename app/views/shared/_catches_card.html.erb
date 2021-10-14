@@ -1,5 +1,6 @@
 
-<%= link_to catch_path(catch) do %>
+<%= link_to catch_path(element) do %>
+
   <div class="catch-card mb-3">
     <div class='anotation'>
       <p>41</p>
@@ -8,10 +9,10 @@
       <%= cl_image_tag(catch.image.key) %>
     </div>
     <div class="catch-info">
-      <h1> <%= catch.name %></h1>
-      <h2>Scientific name: <%= catch.scientific_name %></h2>
-      <p><strong>Description:</strong><%= catch.description %></p>
-      <p>Habitat: <%= catch.habitat %></p>
+      <h1> <%= element.name %></h1>
+      <h2>Scientific name: <%= element.scientific_name %></h2>
+      <p><strong>Description:</strong><%= element.description %></p>
+      <p>Habitat: <%= element.habitat %></p>
     </div>
   </div>
 <% end %>
