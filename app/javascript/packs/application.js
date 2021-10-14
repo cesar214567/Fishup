@@ -19,12 +19,12 @@ ActiveStorage.start();
 
 // External imports
 import "bootstrap";
-import {initMapbox} from "../plugins/init_mapbox";
+//import {initMapbox} from "../plugins/init_mapbox";
 import {initMapbox1} from "../plugins/spot_mapbox";
 
 document.addEventListener("turbolinks:load", () => {
 	initMapbox1();
-	initMapbox();
+	//initMapbox();
 });
 const cities = document.getElementById("user_city");
 const countries = document.getElementById("user_country");
