@@ -50,9 +50,21 @@ user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
 user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
 
 bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: "Maybe the best bait of all times")
-bait1_image = URI.open("https://source.unsplash.com/120x120/?worm
-")
+bait1_image = URI.open("https://static.wixstatic.com/media/9f10c3_3787030362c91a1ac8a896fdaf902177.jpg/v1/fill/w_390,h_263,al_c,lg_1,q_80/9f10c3_3787030362c91a1ac8a896fdaf902177.webp")
 bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
+
+bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
+bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
+bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
+
+bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
+bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
+bait3.image.attach({io:bait3_image, filename:'image3', content_type:'image/png'})
+
+bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
+bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
+bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
+
 
 bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
 bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
@@ -63,5 +75,13 @@ catch_spot1 = CatchSpot.create!(spot:spot1,catch:Catch.first,rarity:"Common")
 spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
 spot1.images.attach({io:spot_image, filename:'image_spots', content_type:'image/png'})
 
+
+spot2 = Spot.create!(name: "Lago Hermoso",description: "Is a small lake on Argentina, located on Neuquen. You can find diferent species of fish.",latitude: -40.348244645061605, longitude:-71.519812218733)
+spot_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071059/Fish%20up/joe-pohle-BKTXvgH3IRc-unsplash_hvz0vu.jpg")
+spot2.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
+
+spot3 = Spot.create!(name: "Lago Nahuel Huapi",description: "Is a huge lake on the south of Argentina, located on Bariloche, Rio Grande. You can find diferent species of fish. Great place to go fishing",latitude: -40.90623084689651, longitude:-71.514833479767)
+spot_image3 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634228260/Fish%20up/kyle-johnson-TEZZzuQTt8g-unsplash_qjbci2.jpg")
+spot3.images.attach({io:spot_image3, filename:'image_spots2', content_type:'image/png'})
 
 puts "all done!"

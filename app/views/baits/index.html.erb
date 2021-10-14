@@ -1,51 +1,7 @@
 
-<div class="d-flex">
+<div class="d-flex justify-content-center mt-5">
 
-  <div class="col-3 mt-5 bg-white h-100 pt-5 pb-5 sticky-top ">
-    <%= simple_form_for :bait, url: baits_path, :method => "get",:class => "form-group" do |f| %>
-    <div class="row">
-      <div class="col">
-        <%= f.input :max_people, :class => "form-control"%>
-      </div>
-      <div class="col">
-        <%= f.input :price, :class => "form-control"%>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col">
-        <%= f.input :bait_type, :class => "form-control"%>
-      </div>
-      <div class="col">
-        <%= f.input :name, :class => "form-control"%>
-      </div>
-
-    </div>
-    <div class="row justify-content-center">
-      <%= f.submit "Search", class: "btn btn-primary" %>
-    </div>
-
-    <% end %>
-  </div>
-
-  <div class="col-1"></div>
   <div class="col-6">
-  <%@baits.each do |bait|  %>
-
-    <div class="ship-card mt-3">
-      <%= link_to bait_path(bait) do %>
-      <% unless bait.image.nil? %>
-        <%= cl_image_tag bait.image.key, class: "ml-0" %>
-      <% end %>
-      <div class="card-ship-info">
-        <h2 class><%= bait.name.capitalize %></h2>
-        <hr>
-        <p><strong>Cost:</strong> <%= bait.cost %></p>
-        <p><strong>Description:</strong> <%= bait.description %></p></a>
-      </div>
-      <% end %>
-    </div>
-
-  <% end %>
-
+    <%= render 'shared/vertical_scrollbar' , :array => @baits, :vh => "vh-80" %>
   </div>
 </div>
