@@ -50,9 +50,21 @@ user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
 user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
 
 bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: "Maybe the best bait of all times")
-bait1_image = URI.open("https://source.unsplash.com/120x120/?worm
-")
+bait1_image = URI.open("https://static.wixstatic.com/media/9f10c3_3787030362c91a1ac8a896fdaf902177.jpg/v1/fill/w_390,h_263,al_c,lg_1,q_80/9f10c3_3787030362c91a1ac8a896fdaf902177.webp")
 bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
+
+bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
+bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
+bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
+
+bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
+bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
+bait3.image.attach({io:bait3_image, filename:'image3', content_type:'image/png'})
+
+bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
+bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
+bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
+
 
 bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
 bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
