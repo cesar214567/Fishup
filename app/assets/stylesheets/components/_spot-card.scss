@@ -3,10 +3,11 @@
   box-shadow: 2px 2px 3px #cdcdcd;
   border-radius: 5px;
   height: 200px;
-  width: 660px;
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  margin-left:20px;
 }
 
 .card-spot-name {
