@@ -22,7 +22,9 @@
           <%= spot.name.capitalize%>
         </div>
         <div class="card-spot-location">
-          <p><%= spot.latitude %>, <%= spot.longitude%></p>
+          <% result =  Geocoder.search([spot.latitude, spot.longitude]) %>
+          <strong><%= result.first.country if result.first.data["error"].nil?%>,
+          <%= result.first.state if result.first.data["error"].nil? %></strong></p>
         </div>
         <div>
           <i class="far fa-heart" style="position: relative; right: -408px; top: -88px;"></i>
