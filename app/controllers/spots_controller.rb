@@ -1,6 +1,9 @@
 class SpotsController < ApplicationController
   def index
     @spots = policy_scope(Spot)
+    if params[:query].present?
+      @spots = policy_scope(Spot).where()
+    end
     @markers = @spots.map do |spot|
       {
         lat: spot.latitude,

@@ -3,14 +3,19 @@
 </div>
 
 <div class="container filtros">
+  <%= render "shared/search_bar", path: spots_path %>
   <div class="filtro" ><%=link_to "#" do %><h6>Type of water</h6><%end%></div>
   <div class="filtro" ><%=link_to "#" do %><h6>catches</h6><%end%></div>
   <div class="filtro" ><%=link_to baits_path do %><h6>Baits</h6><%end%></div>
   <div class="filtro" ><%=link_to "#" do %><h6>Rating</h6><%end%></div>
 </div>
 
+<%#div padre %>
 <div class="vh-100" style="margin:20px;">
+
+
   <div class="d-flex vh-100">
+
   <div class="flex-grow-1 mx-3">
     <% @spots.each do |spot|%>
     <div class="card-spot">
@@ -34,7 +39,9 @@
     </div>
     <%end %>
   </div>
-  <div class="col-6 ">
+
+  <%# div del mapa  %>
+  <div class="col-5">
     <div
       id="map-spot" class="map-spot"
       data-markers="<%= @markers.to_json %>"
