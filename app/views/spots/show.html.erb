@@ -1,10 +1,10 @@
 <div class="container">
   <div class ="mt-3">
     <h1><%= @spot.name %></h1>
-    <% result =  Geocoder.search([@ship.latitude, @ship.longitude]) %>
+    <% result =  Geocoder.search([@spot.latitude, @spot.longitude]) %>
     <p><i class="fas fa-star"> </i> 4.5/5 (420 reviews) | <strong><%= result.first.country if result.first.data["error"].nil?%>,
     <%= result.first.state if result.first.data["error"].nil? %></strong></p>
-    <%= link_to "Add a Posts", post_create_path %>
+    <%= link_to "Add a Posts", "#" %>
   </div>
 
 
@@ -24,14 +24,14 @@
     <div>
       <h3>Captures</h3>
     </div>
-    <%= @spot.captures%>
+     <%= @spot.catches%>
   </div>
 
   <div>
     <div>
       <h3>Baits</h3>
     </div>
-    <%= @spot.baits%>
+    <%# <%= @spot.baits%>
   </div>
 
   <div>
