@@ -17,7 +17,9 @@ class SpotsController < ApplicationController
     @spot = Spot.find(params[:id])
     @spot_images = @spot.images.all
     @posts = Post.new
+    authorize @spot
   end
+
 
   def new
     @spot = Spot.new
