@@ -1,14 +1,15 @@
-<h1>Spots</h1>
-
-
-<div class="container filtros">
-  <div class="" ><h6>Type of water</h6></div>
-  <div class="" ><h6>Captures</h6></div>
-  <div class="" ><h6>Baits</h6></div>
-  <div class="" ><h6>Rating</h6></div>
+<div class="container" style="margin-left: 37px; margin-top: 25px;">
+<h1>List of spots</h1>
 </div>
 
-<div class="vh-100">
+<div class="container filtros">
+  <div class="filtro" ><%=link_to "#" do %><h6>Type of water</h6><%end%></div>
+  <div class="filtro" ><%=link_to "#" do %><h6>catches</h6><%end%></div>
+  <div class="filtro" ><%=link_to baits_path do %><h6>Baits</h6><%end%></div>
+  <div class="filtro" ><%=link_to "#" do %><h6>Rating</h6><%end%></div>
+</div>
+
+<div class="vh-100" style="margin:20px;">
   <div class="d-flex vh-100">
   <div class="flex-grow-1 mx-3">
     <% @spots.each do |spot|%>
@@ -17,12 +18,16 @@
         <%= cl_image_tag spot.images.first.key, class: "ml-0", style:"height: 160px; width:130px" %>
       </div>
       <div>
-      <div class="card-spot-name">
-        <%= spot.name.capitalize%>
-      </div>
+        <div class="card-spot-name">
+          <%= spot.name.capitalize%>
+        </div>
+        <div class="card-spot-location">
           <p><%= spot.latitude %>, <%= spot.longitude%></p>
-          <i class="far fa-heart"></i>
-          <div class="">
+        </div>
+        <div>
+          <i class="far fa-heart" style="position: relative; right: -408px; top: -88px;"></i>
+        </div>
+          <div class="position: relative; left: -52px; top: -12px; font-size: 15px;">
             <%=link_to "Check more information", spot_path(spot), style:"background-color: #FCAF3F;color: white;padding: 5px;border-radius: 10px;" %>
           </div>
       </div>
