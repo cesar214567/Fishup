@@ -7,4 +7,10 @@ class Spot < ApplicationRecord
   validates :name, :description, :longitude, :latitude, presence: true
   reverse_geocoded_by :latitude, :longitude, address: :loc
   scope :from_bait_id, ->(id) { distinct.joins(catch_spots: { catch: { bait_catches: :bait } }).where(baits: { id: id })}
+  include PgSearch::Model
+  pg_search_scope :general_search,
+    against: [ :name, :loc ],
+    using: {
+      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+    }
 end
