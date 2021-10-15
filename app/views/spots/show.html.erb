@@ -26,7 +26,7 @@
     <% images_processed.each do |slice| %>
       <div class="column-grid" style="max-width: <%= 100/images_processed.length%>%">
         <% slice.each do |image| %>
-          <%= cl_image_tag image, width: 200, height: 150, crop: :fit, :style =>"width:100%"%>
+                   <%= cl_image_tag image, width: 200, height: 150, crop: :fit, :style =>"width:100%"%>
         <% end %>
       </div>
     <% end %>
@@ -71,34 +71,7 @@
       </div>
     </div>
 
- <div style="display: flex; justify-content: space-around;">
-    <div class="card-trip">
-  <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634247595/Fish%20up/sincerely-media-gPnHi8AmO5k-unsplash_l2dyhc.jpg" />
-  <div class="card-trip-infos">
-  <%# <% @spot.each do |spot|%> %>
-    <div>
-     <h2> <%# <%=spot.baits.name%></h2>
-       <p><%#<%=@spot.baits.description%></p>
-    </div>
-    <h2 class="card-trip-pricing"><%# <%=@spot.baits.description%></h2> %>
-    <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071061/Fish%20up/gregor-moser-QGIJUqnEpCY-unsplash_t9ucj7.jpg" class="card-trip-user avatar-bordered" />
-  </div>
-  </div>
-
-
-
-  <div class="card-trip">
-  <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634247595/Fish%20up/sincerely-media-gPnHi8AmO5k-unsplash_l2dyhc.jpg" />
-  <div class="card-trip-infos">
-  <%# <% @spot.each do |spot|%> %>
-    <div>
-     <h2> <%# <%=spot.baits.name%></h2>
-       <p><%#<%= spot.baits.description%></p>
-    </div>
-    <h2 class="card-trip-pricing"><%# <%= spot.baits.description%></h2> %>
-    <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071061/Fish%20up/gregor-moser-QGIJUqnEpCY-unsplash_t9ucj7.jpg" class="card-trip-user avatar-bordered" />
-  </div>
-  </div>
+    <%= render "shared/horizontal_scrollbar2", :array => Bait.from_spot_id(@spot.id) %>
  </div>
 
 
