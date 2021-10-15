@@ -24,7 +24,6 @@
     left: -49px;
     font-size: 12px;
     font-weight: 200;
-
   }
 
 
@@ -58,4 +57,19 @@
   h6:hover {
     box-shadow: 2px 2px 3px rgba(104, 104, 104, 0.726);
   }
+}
+
+
+.show-card{
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.fondo-show-spot {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08),rgba(255, 255, 255, 0.08)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/c_scale,h_4547,q_36/v1634239093/Fish%20up/kiwihug-iiXyEE-HVXQ-unsplash_sdemfa.jpg");
+  background-size:700px;
+  width: 100%;
+  height: 50vh;
 }
