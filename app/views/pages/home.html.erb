@@ -1,1 +1,104 @@
-<h1>home</h1>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1465401180489-ceb5a34d8a63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80);">
+  <div class="container">
+    <h1><strong>Fishup</strong></h1>
+    <p>Get a rod, we'll give you a spot</p>
+    <%= link_to "Browse spots", spots_path, class:"btn btn-light"%>
+  </div>
+</div>
+
+<div class="container vh-60">
+  <div class="row">
+    <div class="col-5">
+      <h3 class= "subtitle-homepage">Best Community</h3>
+      <hr>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum fuga, omnis ad aspernatur velit id voluptas illum recusandae minus dolorem, similique dolor corporis ex expedita repellat non modi iusto ipsam.</p>
+    </div>
+    <div class="col-2"></div>
+    <div class="col-5 cards ">
+      <div class="card mb-3" >
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633465201/jose-llamas-lVRO7SAMtdU-unsplash_lelxra.jpg", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title">Best Experience</h5>
+          <p class="card-text">Lorem ipsum </p>
+        </div>
+      </div>
+      <div class="card" >
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633523087/oliver-sjostrom-4pxycrNRhvg-unsplash_zojwlt.jpg", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title">Best Experience</h5>
+          <p class="card-text">Lorem ipsum </p>
+        </div>
+      </div>
+      <div class="card" >
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633531794/kiril-dobrev-8cQpL8kGqso-unsplash_pvxdar.jpg", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title">Best Experience</h5>
+          <p class="card-text">Lorem ipsum </p>
+        </div>
+      </div>
+      <div class="card" >
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633524627/Copia_de_nikldn-t-6GW8T6Jsc-unsplash_wd1sbf.jpg", class: "card-img-top"%>
+        <div class="card-body">
+          <h5 class="card-title">Best Experience</h5>
+          <p class="card-text">Lorem ipsum </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class= "subtitle-homepage">Nearby Spots</h3>
+    <div class="d-flex justify-content-between">
+      <div class="card-type-ship">
+        <a href="/ships?ship_type=fishing"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633522888/chad-kirsebom-b18bcDb-PX0-unsplash_auhgww.jpg" %>
+        <h5>Fishing</h5></a>
+      </div>
+      <div class="card-type-ship">
+        <a href="/ships?ship_type=tourism"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633523087/oliver-sjostrom-4pxycrNRhvg-unsplash_zojwlt.jpg" %>
+        <h5>Tourism </h5></a>
+      </div>
+      <div class="card-type-ship">
+        <a href="/ships?ship_type=diving"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633531794/kiril-dobrev-8cQpL8kGqso-unsplash_pvxdar.jpg" %>
+        <h5>Diving</h5></a>
+      </div>
+      <div class="card-type-ship">
+        <a href="/ships?ship_type=leisure"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633524627/Copia_de_nikldn-t-6GW8T6Jsc-unsplash_wd1sbf.jpg" %>
+        <h5>Leisure </h5></a>
+      </div>
+
+    </div>
+</div>
+
+
+<div class="container mini-banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633466855/nick-karvounis-keLEfEdxXYc-unsplash_ec0ghs.jpg); height: 500px; width: 1100px; border-radius: 12px">
+  <div class="promotion-banner-capitan">
+    <h5>Be the captain of the ship</h5>
+    <p>Share your boat to earn extra money and enjoy new opportunities</p>
+    <button type="button" class="btn btn-light">More information</button>
+  </div>
+</div>
+
+
+
+
+
+
+<div class="container">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2021 Fune Company, Inc</p>
+
+  <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/ar_1:1,b_rgb:f4f4f4,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_212,z_1.8/v1633459870/Fune_j8myk2.jpg", style:"height: 60px; width: 55px; margin-left: 5px" %>
+
+
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
+</div>
