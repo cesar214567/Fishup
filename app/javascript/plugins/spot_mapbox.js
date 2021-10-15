@@ -1,5 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const declareMap = (geocordinates,mapSpot,mapElement) => {
   mapSpot = new mapboxgl.Map({

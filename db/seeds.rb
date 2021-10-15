@@ -59,7 +59,7 @@ bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'}
 
 bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
 bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
-bait3.image.attach({io:bait3_image, filename:'image3', content_type:'image/png'})
+bait3.image.attach  ({io:bait3_image, filename:'image3', content_type:'image/png'})
 
 bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
 bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
@@ -74,6 +74,21 @@ spot1 = Spot.create!(name: "muelle de chorrillos",description: "lugar para obten
 catch_spot1 = CatchSpot.create!(spot:spot1,catch:Catch.first,rarity:"Common")
 spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
 spot1.images.attach({io:spot_image, filename:'image_spots', content_type:'image/png'})
+
+spot_image2 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
+spot1.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
+
+
+spot_image3 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
+spot1.images.attach({io:spot_image3, filename:'image_spots3', content_type:'image/png'})
+
+spot_image4 = URI.open("https://assets-global.website-files.com/5edf9e74d5a7587412e77dbb/5edf9e74d5a758f8e5e77e4c_port.jpg")
+spot1.images.attach({io:spot_image4, filename:'image_spots4', content_type:'image/png'})
+
+spot_image5 = URI.open("https://images.squarespace-cdn.com/content/v1/5fa365217945492b75932d16/1618976551836-2OPUXXX0ZST7YHR1TQ4L/ports-and-harbours.jpg")
+spot1.images.attach({io:spot_image5, filename:'image_spots5', content_type:'image/png'})
+
+
 
 
 spot2 = Spot.create!(name: "Lago Hermoso",description: "Is a small lake on Argentina, located on Neuquen. You can find diferent species of fish.",latitude: -40.348244645061605, longitude:-71.519812218733)

@@ -15,13 +15,30 @@
   </div>
 
 
-  <div>
-  <%= @spot_images%>
-  <%= @spot_images%>
-  <%= @spot_images%>
+  <% images = @spot.images.map {|image| image.key} %>
+  <% images_processed = []%>
+  <% until images.empty? %>
+    <% random = rand(1..3) %>
+    <% images_processed.push(images.slice(0,random)) %>
+    <% images = images.drop(random) %>
+  <% end %>
+  <div class="row-grid">
+    <% images_processed.each do |slice| %>
+      <div class="column-grid" style="max-width: <%= 100/images_processed.length%>%">
+        <% slice.each do |image| %>
+          <%= cl_image_tag image, :style =>"width:100%"%>
+        <% end %>
+      </div>
+    <% end %>
+
   </div>
-
-
+  <!--
+  <div id="photos">
+    <% @spot.images.each do |image|%>
+      <%= cl_image_tag image.key %>
+    <% end %>
+  </div>
+  -->
   <div>
     <div>
       <h3 style="margin-top: 20px; ">Description</h3>
