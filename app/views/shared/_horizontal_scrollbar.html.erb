@@ -6,9 +6,13 @@
           <div class="card-trip inline">
             <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{element.longitude},#{element.latitude},14.25,0,60/300x300?access_token=#{ENV['MAPBOX_API_KEY']}" %>
             <div class="card-trip-infos ">
-              <div class="w-100 text-center ">
-                  <h2><%= element.name %></h2>
-                  <p><%= element.description %></p>
+              <div class="w-100 ">
+                  <h2 class="my-3 text-center "><%= element.name %></h2>
+                  <% result =  element.loc.nil? ? nil : element.loc.split(",") %>
+
+                  <p><strong>Location:<%= result[-1] unless result.nil? %>,<%= result[-3] unless result.nil? %></strong></p>
+                  <p><strong>Description:</strong> <%= element.description %></p>
+
               </div>
             </div>
           </div>
