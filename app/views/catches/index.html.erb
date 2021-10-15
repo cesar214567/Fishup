@@ -1,8 +1,6 @@
-<h1>catches</h1>
 <div class="container">
-  <% @catches.each do |catch| %>
-    <%= render "shared/catches_card", element: catch %>
-  <% end %>
+<%= render "shared/search_bar", path: catches_path, class:"bt-3" %>
+    <%= render "shared/vertical_scrollbar", array: @catches %>
 </div>
 
 
