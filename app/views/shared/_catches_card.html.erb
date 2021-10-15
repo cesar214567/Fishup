@@ -6,7 +6,7 @@
       <p>41</p>
     </div>
     <div class="fish-image">
-      <%= cl_image_tag(catch.image.key) %>
+      <%= cl_image_tag catch.image.key, width: 200, height: 150, crop: :fit %>
     </div>
     <div class="catch-info">
       <h1> <%= catch.name %></h1>
