@@ -4,9 +4,9 @@
   <div class =" show-card">
     <div>
       <h1><%= @spot.name %></h1>
-      <% result =  Geocoder.search([@spot.latitude, @spot.longitude]) %>
-      <p><i class="fas fa-star"> </i> 4.5/5 (420 reviews) | <strong><%= result.first.country if result.first.data["error"].nil?%>,
-      <%= result.first.state if result.first.data["error"].nil? %></strong></p>
+      <% result = @spot.loc.nil? ? nil :@spot.loc.split(",") %>
+      <p><i class="fas fa-star"> </i> 4.5/5 (420 reviews) | <strong><%= result[-1] unless result.nil? %>,
+      <%= result[-3] unless result.nil? %></strong></p>
     </div>
     <div>
       <%= link_to "Add a Posts", "#", style:"background-color: #466a8e; color: white; padding: 7px; border-radius: 5px; position: relative; top: 17px;
@@ -26,19 +26,13 @@
     <% images_processed.each do |slice| %>
       <div class="column-grid" style="max-width: <%= 100/images_processed.length%>%">
         <% slice.each do |image| %>
-          <%= cl_image_tag image, :style =>"width:100%"%>
+          <%= cl_image_tag image, width: 200, height: 150, crop: :fit, :style =>"width:100%"%>
         <% end %>
       </div>
     <% end %>
 
   </div>
-  <!--
-  <div id="photos">
-    <% @spot.images.each do |image|%>
-      <%= cl_image_tag image.key %>
-    <% end %>
-  </div>
-  -->
+
   <div>
     <div>
       <h3 style="margin-top: 20px; ">Description</h3>
@@ -84,9 +78,9 @@
   <%# <% @spot.each do |spot|%> %>
     <div>
      <h2> <%# <%=spot.baits.name%></h2>
-       <p><%#<%= spot.baits.description%></p>
+       <p><%#<%=@spot.baits.description%></p>
     </div>
-    <h2 class="card-trip-pricing"><%# <%= spot.baits.description%></h2> %>
+    <h2 class="card-trip-pricing"><%# <%=@spot.baits.description%></h2> %>
     <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071061/Fish%20up/gregor-moser-QGIJUqnEpCY-unsplash_t9ucj7.jpg" class="card-trip-user avatar-bordered" />
   </div>
   </div>
