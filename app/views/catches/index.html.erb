@@ -1,14 +1,3 @@
-<h1>catches</h1>
 <div class="container">
-  <% @catches.each do |catch| %>
-    <%= render "shared/catches_card", element: catch %>
-  <% end %>
+  <%= render "shared/vertical_scrollbar", array: @catches, vh: "vh-80" %>
 </div>
-
-
-
-
-
-
-
-
