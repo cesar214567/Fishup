@@ -47,7 +47,7 @@
       </div>
     </div>
 
-    <%= @spot.description%>
+    <%= @spot.description%> <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum rerum sapiente quidem suscipit nobis, dolorum vel aliquam animi ad deleniti aliquid sequi, non, nesciunt nisi autem asperiores molestiae velit! Mollitia.</p>
   </div>
 
  </div>
@@ -61,9 +61,12 @@
         <div style="width: 100px; border-bottom: 1px solid black; margin-bottom: 15px"></div>
       </div>
     </div >
-    <div class="catch-card">
-     <%= @spot.catches%>
-     </div>
+
+
+     <%= render "shared/vertical_scrollbar", :array => @spot.catches, :vh => "vh-40" %>
+
+
+
   </div>
 
   <div>
@@ -74,6 +77,7 @@
       </div>
     </div>
 
+ <div style="display: flex; justify-content: space-around;">
     <div class="card-trip">
   <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634247595/Fish%20up/sincerely-media-gPnHi8AmO5k-unsplash_l2dyhc.jpg" />
   <div class="card-trip-infos">
@@ -85,9 +89,25 @@
     <h2 class="card-trip-pricing"><%# <%= spot.baits.description%></h2> %>
     <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071061/Fish%20up/gregor-moser-QGIJUqnEpCY-unsplash_t9ucj7.jpg" class="card-trip-user avatar-bordered" />
   </div>
-</div>
-    <%# <%= @spot.baits%>
   </div>
+
+
+
+  <div class="card-trip">
+  <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634247595/Fish%20up/sincerely-media-gPnHi8AmO5k-unsplash_l2dyhc.jpg" />
+  <div class="card-trip-infos">
+  <%# <% @spot.each do |spot|%> %>
+    <div>
+     <h2> <%# <%=spot.baits.name%></h2>
+       <p><%#<%= spot.baits.description%></p>
+    </div>
+    <h2 class="card-trip-pricing"><%# <%= spot.baits.description%></h2> %>
+    <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071061/Fish%20up/gregor-moser-QGIJUqnEpCY-unsplash_t9ucj7.jpg" class="card-trip-user avatar-bordered" />
+  </div>
+  </div>
+ </div>
+
+
 
   <div>
     <div>
