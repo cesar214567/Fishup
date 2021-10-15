@@ -1,0 +1,23 @@
+<div class="my-3">
+  <div class="horizontal-scroll">
+    <div class="list">
+      <% array.each do |element| %>
+        <%= link_to baits_path(element) do  %>
+          <div class="card-trip">
+            <img src="https://res.cloudinary.com/ddlmgs04n/image/upload/v1634247595/Fish%20up/sincerely-media-gPnHi8AmO5k-unsplash_l2dyhc.jpg" />
+            <div class="card-trip-infos">
+
+            <div>
+              <h2>  <%= element.name%></h2>
+              <p><%= element.description%></p>
+             </div>
+              <h2 class="card-trip-pricing"><%= element.cost %></h2>
+              <%= cl_image_tag element.image.key, class:"card-trip-user avatar-bordered" %>
+      </div>
+    </div>
+
+        <% end  %>
+      <% end %>
+    </div>
+  </div>
+</div>
