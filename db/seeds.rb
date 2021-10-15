@@ -8,18 +8,34 @@ require 'open-uri'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 puts "deleting previous db"
-puts "creating catches"
 
-User.create!(email:'user1@gmail.com', first_name:'user', last_name:'number1', phone_number:'123456789', country:'ecuador', city:'guayaquil', password: '123456789', address: 'en mi casa', birth_date: Time.now)
+puts "Creating baits"
+
+bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: "Maybe the best bait of all times")
+bait1_image = URI.open("https://static.wixstatic.com/media/9f10c3_3787030362c91a1ac8a896fdaf902177.jpg/v1/fill/w_390,h_263,al_c,lg_1,q_80/9f10c3_3787030362c91a1ac8a896fdaf902177.webp")
+bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
+
+bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
+bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
+bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
+
+bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
+bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
+bait3.image.attach  ({io:bait3_image, filename:'image3', content_type:'image/png'})
+
+bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
+bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
+bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
 
 catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
 fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
 catch1.image.attach({io:fishpic1, filename: 'redfish', content_type:'image/png'})
-
+catch1.bait =
 
 catch2 = Catch.create!(name: "Bigeye Tuna" , description:"Bigeye tuna are dark metallic blue on the back and upper sides and white on the lower sides and belly.", habitat: "Bigeye tuna are a highly migratory species, swimming long distances throughout the ocean.", scientific_name:"Thunnus obesus", maximum_size: 6, minimum_size:5.5)
 fishpic2 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_bigeye_tuna.png')
 catch2.image.attach({io:fishpic2, filename:"bigeye tuna", content_type:'image/png'})
+
 
 catch3 = Catch.create!(name: "Atlantic Chub Mackerel" , description:"They are silvery in color, with greenish-blue backs. The upper surfaces have dark zigzagging stripes, and the bellies are pale and marked with wavy lines.", habitat: "Western Atlantic Ocean range from Nova Scotia (where they are rare) through Argentina, including the Gulf of Mexico.  ", scientific_name:"Scomber colias", maximum_size: 22 , minimum_size: 18)
 fishpic3 = URI.open('https://www.fishwatch.gov/sites/default/files/Atlantic-chub-mackerel-FNL_NB_W.png')
@@ -49,21 +65,6 @@ user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
 ")
 user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
 
-bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: "Maybe the best bait of all times")
-bait1_image = URI.open("https://static.wixstatic.com/media/9f10c3_3787030362c91a1ac8a896fdaf902177.jpg/v1/fill/w_390,h_263,al_c,lg_1,q_80/9f10c3_3787030362c91a1ac8a896fdaf902177.webp")
-bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
-
-bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
-bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
-bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
-
-bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
-bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
-bait3.image.attach  ({io:bait3_image, filename:'image3', content_type:'image/png'})
-
-bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
-bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
-bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
 
 
 bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
