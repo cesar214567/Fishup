@@ -42,8 +42,9 @@
 
 .promotion-banner-capitan {
   position: relative;
-  top: 110px;
+  top: 300px;
   left: 50px;
+  color: white;
 }
 .promotion-banner-capitan {
   h5 {
@@ -89,4 +90,11 @@
   .country-cards-padre {
     grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+
+
+.card-img-top {
+  object-fit: cover;
+
 }
