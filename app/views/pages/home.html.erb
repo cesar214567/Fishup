@@ -1,5 +1,5 @@
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1465401180489-ceb5a34d8a63?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2942&q=80);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/ddlmgs04n/image/upload/v1634328614/Fish%20up/greysen-johnson-cZVzzFadTMc-unsplash_1_cfkwc9.jpg);">
   <div class="container">
     <h1><strong>Fishup</strong></h1>
     <p>Get a rod, we'll give you a spot</p>
@@ -15,37 +15,37 @@
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum fuga, omnis ad aspernatur velit id voluptas illum recusandae minus dolorem, similique dolor corporis ex expedita repellat non modi iusto ipsam.</p>
     </div>
     <div class="col-2"></div>
-    <div class="col-5 cards ">
+      <div class="col-5 cards ">
       <div class="card mb-3" >
-        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633465201/jose-llamas-lVRO7SAMtdU-unsplash_lelxra.jpg", class: "card-img-top"%>
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634328773/Fish%20up/maria-orlova-kdh4OxHLM_Q-unsplash_nl84ix.jpg", class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title">Best Experience</h5>
           <p class="card-text">Lorem ipsum </p>
         </div>
       </div>
       <div class="card" >
-        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633523087/oliver-sjostrom-4pxycrNRhvg-unsplash_zojwlt.jpg", class: "card-img-top"%>
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071047/Fish%20up/austin-neill-3quTd6dyudg-unsplash_vqtccz.jpg", class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title">Best Experience</h5>
           <p class="card-text">Lorem ipsum </p>
         </div>
       </div>
       <div class="card" >
-        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633531794/kiril-dobrev-8cQpL8kGqso-unsplash_pvxdar.jpg", class: "card-img-top"%>
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634328904/Fish%20up/mana-nabavian-gdR9YwVbvtk-unsplash_d2koim.jpg", class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title">Best Experience</h5>
           <p class="card-text">Lorem ipsum </p>
         </div>
       </div>
       <div class="card" >
-        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633524627/Copia_de_nikldn-t-6GW8T6Jsc-unsplash_wd1sbf.jpg", class: "card-img-top"%>
+        <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634328952/Fish%20up/leonard-cotte-DUZ9XT10Y_A-unsplash_zbljcm.jpg", class: "card-img-top"%>
         <div class="card-body">
           <h5 class="card-title">Best Experience</h5>
           <p class="card-text">Lorem ipsum </p>
         </div>
       </div>
-
     </div>
+  </div>
   </div>
 </div>
 
@@ -53,30 +53,34 @@
   <h1 class= "subtitle-homepage">Nearby Spots</h3>
     <div class="d-flex justify-content-between">
       <div class="card-type-ship">
-        <a href="/ships?ship_type=fishing"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633522888/chad-kirsebom-b18bcDb-PX0-unsplash_auhgww.jpg" %>
-        <h5>Fishing</h5></a>
+       <%= link_to spots_path do%>
+       <div>
+         <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634329963/Fish%20up/justin-luebke-ARSCXacOtkY-unsplash_lu061e.jpg" %>
+      </div>
+         <%end %>
+        <h5>Muelle de chorrillos </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=tourism"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633523087/oliver-sjostrom-4pxycrNRhvg-unsplash_zojwlt.jpg" %>
-        <h5>Tourism </h5></a>
+        <a href="/ships?ship_type=tourism"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071056/Fish%20up/ju-on-_zZrmWCGdsg-unsplash_snei3z.jpg" %>
+        <h5>La Pampilla’s ro </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=diving"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633531794/kiril-dobrev-8cQpL8kGqso-unsplash_pvxdar.jpg" %>
-        <h5>Diving</h5></a>
+        <a href="/ships?ship_type=diving"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071054/Fish%20up/ivana-cajina-9W9WSv6JyS8-unsplash_vioikl.jpg" %>
+        <h5>Las Estrellas’ rocks</h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=leisure"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633524627/Copia_de_nikldn-t-6GW8T6Jsc-unsplash_wd1sbf.jpg" %>
-        <h5>Leisure </h5></a>
+        <a href="/ships?ship_type=leisure"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634330092/Fish%20up/nicolas-jossi-33GscNREhrk-unsplash_lmhr8z.jpg" %>
+        <h5>La defensa’s wall </h5></a>
       </div>
 
     </div>
 </div>
 
 
-<div class="container mini-banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/ddlmgs04n/image/upload/c_fit,h_250,w_300/v1633466855/nick-karvounis-keLEfEdxXYc-unsplash_ec0ghs.jpg); height: 500px; width: 1100px; border-radius: 12px">
+<div class="container mini-banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/ddlmgs04n/image/upload/v1634329689/Fish%20up/robson-hatsukami-morgan-qr7tsSwDOg0-unsplash_1_hrm3ox.jpg); height: 500px; width: 1100px; border-radius: 12px">
   <div class="promotion-banner-capitan">
-    <h5>Be the captain of the ship</h5>
-    <p>Share your boat to earn extra money and enjoy new opportunities</p>
+    <h5>Explore new adventures</h5>
+
     <button type="button" class="btn btn-light">More information</button>
   </div>
 </div>
