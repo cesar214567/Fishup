@@ -13,6 +13,6 @@ class Spot < ApplicationRecord
   pg_search_scope :general_search,
     against: [ :name, :loc ],
     using: {
-      tsearch: { prefix: true } # <-- now `superman batm` will return something!
+      tsearch: { prefix: true }
     }
 end
