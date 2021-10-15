@@ -8,7 +8,7 @@ class Bait < ApplicationRecord
   pg_search_scope :general_search,
   against: [:name, :description],
   associated_against: {
-    catches: [:name]
+    catches: [:name, :scientific_name]
   }, using: {
     tsearch: {prefix: true}
   }

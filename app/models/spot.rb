@@ -12,7 +12,9 @@ class Spot < ApplicationRecord
   include PgSearch::Model
   pg_search_scope :general_search,
     against: [ :name, :loc ],
-    using: {
+    associated_against: {
+    catches: [:name, :scientific_name]
+  },using: {
       tsearch: { prefix: true }
     }
 end
