@@ -16,7 +16,7 @@
       <p>Habitat: <%= catch.habitat %></p>
       <% if verifiable == true && VerifyCatchSpot.exists_by_user_and_catch_spot(current_user.id,relation.id).empty?%>
         <%= simple_form_for relation, url:catch_spot_verify_catch_spots_path(relation ), method: "post"  do |f| %>
-          <%= f.submit "Submit Ship", class: "btn btn-primary" %>
+          <%= f.submit "I have fished it!", class: "btn btn-primary" %>
         <% end %>
       <% end %>
     </div>
