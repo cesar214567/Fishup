@@ -5,7 +5,9 @@ Rails.application.routes.draw do
     resources :posts, only: %i[new create]
   end
   #  resources :catches, only: %i[index]
-
+  resources :catch_spots, only: [] do
+    resources :verify_catch_spots, only: :create
+  end
   resources :catches, only: %i[show index]
   resources :baits
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
