@@ -1,2 +1,13 @@
-<h2><%=spot.name%></h2>
-<p><%= spot.description %></p>
+<%= link_to spot_path(spot) do%>
+<div class="info-card">
+  <div class="info-card-image">
+  <%= cl_image_tag spot.images.first.key %>
+  <i class="fas fa-heart fa-2x"></i>
+  </div>
+  <div class="spot-info">
+    <p> 200 <i class="fas fa-thumbs-up" style="color:crimson;"></i></p>
+    <h3><%=spot.name%></h3>
+    <p><%= spot.description %></p>
+  </div>
+</div>
+<% end %>
