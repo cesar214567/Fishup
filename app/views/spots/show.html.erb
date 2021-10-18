@@ -1,16 +1,28 @@
 
  <div class="fondo-show-spot">
  <div class="container">
-  <div class =" show-card">
-    <div>
-      <h1><%= @spot.name %></h1>
+  <div class =" show-card d-flex justify-content-between">
+    <div class ="mt-3 ">
+      <h1><%= @spot.name.capitalize %></h1>
       <% result = @spot.loc.nil? ? nil :@spot.loc.split(",") %>
-      <p><i class="fas fa-star"> </i> 4.5/5 (420 reviews) | <strong><%= result[-1] unless result.nil? %>,
+      <p>(<%= VotedSpot.count_by_spot_id(@spot.id) %> votes) | <strong><%= result[-1] unless result.nil? %>,
       <%= result[-3] unless result.nil? %></strong></p>
     </div>
-    <div>
-      <%= link_to "Add a Posts", new_spot_post_path(@spot), style:"background-color: #466a8e; color: white; padding: 7px; border-radius: 5px; position: relative; top: 17px;
-    right: 20px;"%>
+
+    <div class="mt-3 w-20">
+      <div class="d-flex justify-content-end">
+        <%= link_to "Add a Posts", "#", style:"background-color: #466a8e; color: white; padding: 7px; border-radius: 5px;"%>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-around">
+        <% if VotedSpot.exists_by_user_and_spot(current_user.id,@spot.id).empty?%>
+          <%= link_to "Vote ", spot_voted_spots_path(@spot),method: "post", style:"background-color: #466a8e; color: white; padding: 7px; border-radius: 5px;"%>
+        <% end %>
+        <% if LikedSpot.exists_by_user_and_spot(current_user.id,@spot.id).empty?%>
+          <%= link_to "Add to Favourite", spot_liked_spots_path(@spot),method: "post", style:"background-color: #466a8e; color: white; padding: 7px; border-radius: 5px;"%>
+        <% end %>
+      </div>
+
     </div>
   </div>
 
