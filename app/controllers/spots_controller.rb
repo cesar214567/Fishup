@@ -20,17 +20,21 @@ class SpotsController < ApplicationController
     authorize @spot
   end
 
-
   def new
     @spot = Spot.new
     @catches = Catch.all
+    authorize @spot
+
   end
 
   def create
     @spot = Spot.new(spot_params)
-    @user = current_user
-    @spot.user = @user
+    authorize @spot
     if @spot.save
+      catches = params[:spot][:catch_ids]
+      catches.each do |catch_id|
+        CatchSpot.create(spot: @spot, catch_id: catch_id)
+      end
       redirect_to spot_path(@spot)
     else
       render :new
