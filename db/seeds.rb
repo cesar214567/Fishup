@@ -30,7 +30,6 @@ bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'}
 catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
 fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
 catch1.image.attach({io:fishpic1, filename: 'redfish', content_type:'image/png'})
-# catch1.bait =
 
 catch2 = Catch.create!(name: "Bigeye Tuna" , description:"Bigeye tuna are dark metallic blue on the back and upper sides and white on the lower sides and belly.", habitat: "Bigeye tuna are a highly migratory species, swimming long distances throughout the ocean.", scientific_name:"Thunnus obesus", maximum_size: 6, minimum_size:5.5)
 fishpic2 = URI.open('https://www.fishwatch.gov/sites/default/files/atlantic_bigeye_tuna.png')

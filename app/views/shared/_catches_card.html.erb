@@ -1,18 +1,23 @@
 
-<%= link_to catch_path(catch) do %>
 
   <div class="catch-card mb-3">
     <div class='anotation'>
-      <p>41</p>
+      <p><%= VerifyCatchSpot.count_by_catch_spot_id(relation.id) %></p>
     </div>
     <div class="fish-image">
+    <%= link_to catch_path(catch) do %>
       <%= cl_image_tag catch.image.key, width: 200, height: 150, crop: :fit %>
+    <% end %>
     </div>
     <div class="catch-info">
       <h1> <%= catch.name %></h1>
       <h2>Scientific name: <%= catch.scientific_name %></h2>
       <p><strong>Description:</strong><%= catch.description %></p>
       <p>Habitat: <%= catch.habitat %></p>
+      <% if verifiable == true && VerifyCatchSpot.exists_by_user_and_catch_spot(current_user.id,relation.id).empty?%>
+        <%= simple_form_for relation, url:catch_spot_verify_catch_spots_path(relation ), method: "post"  do |f| %>
+          <%= f.submit "Submit Ship", class: "btn btn-primary" %>
+        <% end %>
+      <% end %>
     </div>
   </div>
-<% end %>

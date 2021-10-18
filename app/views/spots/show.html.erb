@@ -57,7 +57,7 @@
     </div >
 
 
-     <%= render "shared/vertical_scrollbar", :array => @spot.catches, :vh => "vh-40" %>
+    <%= render "shared/vertical_scrollbar", :array => @spot.catch_spots, :vh => "vh-40" %>
 
 
 
@@ -87,7 +87,7 @@
         <div class="grande">
           <div>
             <%= @posts.each do |post| %>
-            <%= cl_image_tag post.image.key, width: 200, height: 150, crop: :fit %>
+             <%= cl_image_tag post.image.key, width: 200, height: 150, crop: :fit, :class => "" %>
             <div>
               <p><%= post.title %></p>
               <p><%= post.body %></p>

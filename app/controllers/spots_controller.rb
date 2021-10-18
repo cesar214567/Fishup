@@ -23,6 +23,7 @@ class SpotsController < ApplicationController
 
   def new
     @spot = Spot.new
+    @catches = Catch.all
   end
 
   def create

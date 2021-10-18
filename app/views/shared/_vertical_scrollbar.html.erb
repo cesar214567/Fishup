@@ -1,9 +1,11 @@
-<div class="mb-5">
-  <div class="vertical-scroll vh-100%">
+<div class="mb-5 <%= vh %>">
+  <div class="vertical-scroll h-100">
     <div class="list">
       <% array.each do |element| %>
         <% if element.is_a? Catch %>
-          <%= render "shared/catches_card", catch: element %>
+          <%= render "shared/catches_card", catch: element,verifiable: false %>
+        <% elsif element.is_a? CatchSpot %>
+          <%= render "shared/catches_card", catch: element.catch,verifiable: true, relation: element  %>
         <% else %>
           <%= render "shared/baits_card", bait: element %>
 
