@@ -66,9 +66,10 @@ user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/pn
 
 
 
-bait_catch = BaitCatch.create!(bait:Bait.first,catch: catch1)
-bait_catc2 = BaitCatch.create!(bait:Bait.first,catch: catch2)
-bait_catc3 = BaitCatch.create!(bait:Bait.first,catch: catch3) #################
+bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
+bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
+bait_catc3 = BaitCatch.create!(bait:Bait.first,catch:Catch.third)
+#################
 bait_catc4 = BaitCatch.create!(bait:Bait.first,catch: catch4)
 bait_catc5 = BaitCatch.create!(bait:Bait.second,catch: catch1)
 bait_catc6 = BaitCatch.create!(bait:Bait.second,catch: catch2)
