@@ -1,36 +1,38 @@
-@import '/reset/mixin';
+
 
 
 .carrousel {
   width: 90%;
   max-width: 120em;
-
+  height: fit-content;
   padding: 2em;
-  @include neo(1, 1em, 1em);
-
+  overflow-x:  hidden;
+  background-color: #e5e5e554;
 }
 
-.carrousel  .grande {
-  width: 200%;
+.grande {
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: center;
-   @include neo(1, 1em, 1em);
-   padding: 2em;
+  flex-direction: column;
+  box-shadow: 2px 2px 3px rgba(180, 180, 180, 0.753);
+  padding: 2em;
 
    transition: all .5s ease;
    transform: translate(0%) ;
 }
 .carrousel img {
-  width: calc(50%/ 2 - 2em);
-  @include neo(1, 1em, 1em);
-  min-height: 10vh ;
+  width: calc(100%/ 2 - 2em);
+  margin-top: 10px;
+  height: 220px ;
+  width:fit-content;
 }
 
 .carrousel .puntos {
   width: 100%;
-  padding: 4em;
+  padding: 0em;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -41,9 +43,24 @@
   width: 2em;
   height: 2em;
   margin: 1em 1em 0;
-  @include neo(1, 1em, .6em);
+  background-color: rgb(221, 221, 221);
+  border-radius: 180px;
 }
 
 .carrousel .punto.activo{
-    background-color: lightblue;
+    background-color: rgb(80, 155, 180);
+    border-radius: 180px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 3px #8f8b8b;
+    border-radius: 5px;
+    margin: 10px;
+    h5 {
+      font-size:28px;
+      margin: 10px;
+    }
 }
