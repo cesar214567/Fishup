@@ -1,6 +1,7 @@
 <%= simple_form_for [@spot, @post] do |f|%>
 <%= f.input :title %>
-<%= f.input  :body %>
+<%= f.input :body %>
 <%= f.input :catch, collection: @spot.catches %>
+<%= f.input :image %>
 <%= f.submit %>
 <% end %>
