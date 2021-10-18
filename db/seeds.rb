@@ -15,17 +15,17 @@ bait1 = Bait.create!(cost: "3 dollars per dozen", name: "marucha", description: 
 bait1_image = URI.open("https://static.wixstatic.com/media/9f10c3_3787030362c91a1ac8a896fdaf902177.jpg/v1/fill/w_390,h_263,al_c,lg_1,q_80/9f10c3_3787030362c91a1ac8a896fdaf902177.webp")
 bait1.image.attach({io:bait1_image, filename:'image1', content_type:'image/png'})
 
-# bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
-# bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
-# bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
+bait2 = Bait.create!(cost: "1 dollar per bag", name: "muy muy", description: "This bait attracts a lot of the rock fishes")
+bait2_image = URI.open("https://3.bp.blogspot.com/-ghbZiYf1sy0/W1EOJSkICQI/AAAAAAAAD1I/LEmiNt0UdBwzQX6Gvo-hntrXWO8OIKeNgCLcBGAs/s1600/muy-muy.jpg")
+bait2.image.attach({io:bait2_image, filename:'image2', content_type:'image/png'})
 
-# bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
-# bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
-# bait3.image.attach({io:bait3_image, filename:'image3', content_type:'image/png'})
+bait3 = Bait.create!(cost: "4 dolars per dozen", name: "lombris machete", description: "This bait is for general purposes in the sea")
+bait3_image = URI.open("https://http2.mlstatic.com/D_NQ_NP_672984-MPE43977703762_112020-V.jpg")
+bait3.image.attach({io:bait3_image, filename:'image3', content_type:'image/png'})
 
-# bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
-# bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
-# bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
+bait4 = Bait.create!(cost: "4 dollars per bag", name: "krill", description: "Special for predators")
+bait4_image = URI.open("https://www.bioenciclopedia.com/wp-content/uploads/2013/11/krill2.jpg")
+bait4.image.attach({io:bait4_image, filename:'image3', content_type:'image/png'})
 
 catch1 = Catch.create!(name: "Acadian Redfish" , description:'Acadian redfish are orange to flame red, with paler underbellies.', habitat: "Off New England they are most common in the deep waters of the Gulf of Maine (to depths of 975 feet)", scientific_name:"Sebastes fasciatus", maximum_size: 20, minimum_size:18)
 fishpic1 = URI.open('https://www.fishwatch.gov/sites/default/files/acadian_redfish.png')
@@ -65,8 +65,6 @@ user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
 ")
 user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
 
-
-
 bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
 bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
 bait_catc3 = BaitCatch.create!(bait:Bait.first,catch:Catch.third)
@@ -100,14 +98,13 @@ spot3 = Spot.create!(name: "Lago Nahuel Huapi",description: "Is a huge lake on t
 spot_image3 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634228260/Fish%20up/kyle-johnson-TEZZzuQTt8g-unsplash_qjbci2.jpg")
 spot3.images.attach({io:spot_image3, filename:'image_spots2', content_type:'image/png'})
 
+# post1 = Post.create!(title: "Big Fish on the South", body:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptatibus natus m.")
+# post_image1 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634573221/Fish%20up/sticker-mule-qNhstTawQrI-unsplash_lbnzwd.jpg")
+# post1.image.attach({io:post_image1, filename:'image_post1',content_type:'image/png'})
 
-post1 = Post.create!(title: "Big Fish on the South", body:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptatibus natus m.")
-post_image1 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634573221/Fish%20up/sticker-mule-qNhstTawQrI-unsplash_lbnzwd.jpg")
-post1.image.attach({io:post_image1, filename:'image_post1',content_type:'image/png'})
-
-post2 = Post.create!(title: "The new species of Fish", body:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptatibus natus m.")
-post_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634573390/Fish%20up/michael-yero-AHrsj0zlN-E-unsplash_wqc3e8.jpg")
-post2.image.attach({io:post_image2, filename:'image_post2',content_type:'image/png'})
+# post2 = Post.create!(title: "The new species of Fish", body:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptatibus natus m.")
+# post_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634573390/Fish%20up/michael-yero-AHrsj0zlN-E-unsplash_wqc3e8.jpg")
+# post2.image.attach({io:post_image2, filename:'image_post2',content_type:'image/png'})
 
 
 

@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  resources :spots, only: %i[index show new create edit update]
+  resources :spots, only: %i[index show new create edit update] do
+    resources :posts, only: %i[new create]
+  end
   #  resources :catches, only: %i[index]
 
   resources :catches, only: %i[show index]
