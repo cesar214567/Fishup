@@ -1,0 +1,49 @@
+@import '/reset/mixin';
+
+
+.carrousel {
+  width: 90%;
+  max-width: 120em;
+
+  padding: 2em;
+  @include neo(1, 1em, 1em);
+
+}
+
+.carrousel  .grande {
+  width: 200%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+   @include neo(1, 1em, 1em);
+   padding: 2em;
+
+   transition: all .5s ease;
+   transform: translate(0%) ;
+}
+.carrousel img {
+  width: calc(50%/ 2 - 2em);
+  @include neo(1, 1em, 1em);
+  min-height: 10vh ;
+}
+
+.carrousel .puntos {
+  width: 100%;
+  padding: 4em;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+.carrousel .punto {
+  width: 2em;
+  height: 2em;
+  margin: 1em 1em 0;
+  @include neo(1, 1em, .6em);
+}
+
+.carrousel .punto.activo{
+    background-color: lightblue;
+}

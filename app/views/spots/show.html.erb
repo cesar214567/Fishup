@@ -82,6 +82,27 @@
       <div class="d-flex ">
         <div style="width: 100px; border-bottom: 1px solid black; margin-bottom: 15px"></div>
       </div>
+
+      < <div class="carrousel">
+        <div class="grande">
+          <div>
+            <%= @posts.each do |post| %>
+            <%= cl_image_tag post.image.key, width: 200, height: 150, crop: :fit %>
+            <div>
+              <p><%= post.title %></p>
+              <p><%= post.body %></p>
+            </div>
+            <% end %>
+           </div>
+
+           <div>
+             <ul class="puntos">
+               <li class="punto activo"></li>
+               <li class="punto"></li>
+             </ul>
+           </div>
+        </div>
+      </div>
     </div>
 
 
