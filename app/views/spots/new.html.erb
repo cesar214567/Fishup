@@ -3,8 +3,13 @@
   <%= f.input :description %>
   <%= f.input :latitude, class: "form-control", as: :hidden %>
   <%= f.input :longitude, class: "form-control", as: :hidden%>
+
+  <%= f.association :catches, as: :check_boxes, include_hidden: false%>
+
   <div id="map" class="mb-4"
     style="width: 100%; height: 600px;"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+  <%= f.input :images, :input_html => { :multiple => true } %>
+  <%= f.submit "Create Spot", class: "btn btn-primary" %>
 <% end %>
