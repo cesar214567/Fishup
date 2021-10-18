@@ -11,12 +11,12 @@
 }
 
 .grande {
-  width: 100%;
+  width: 250%;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
   box-shadow: 2px 2px 3px rgba(180, 180, 180, 0.753);
   padding: 2em;
 
@@ -26,8 +26,8 @@
 .carrousel img {
   width: calc(100%/ 2 - 2em);
   margin-top: 10px;
-  height: 220px ;
-  width:fit-content;
+  height: 210px ;
+  width:80%;
 }
 
 .carrousel .puntos {
@@ -53,14 +53,20 @@
 }
 
 .post {
+  background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 2px 2px 3px #8f8b8b;
     border-radius: 5px;
     margin: 10px;
+    width: 440px;
+        height: 390px;
     h5 {
       font-size:28px;
       margin: 10px;
+    }
+    p{
+      font-size: 11px;
     }
 }
