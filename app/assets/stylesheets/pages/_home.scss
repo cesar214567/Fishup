@@ -109,4 +109,9 @@
 
 .fondo-home-page {
   background-image: url("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634569334/Fish%20up/mapa-fondo_asikmo.jpg");
+  // background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-size: cover;
+  height: 800px;
 }
