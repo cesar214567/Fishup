@@ -83,13 +83,13 @@
         <div style="width: 100px; border-bottom: 1px solid black; margin-bottom: 15px"></div>
       </div>
 
-      < <div class="carrousel">
+       <div class="carrousel">
         <div class="grande">
-          <div>
-            <%= @posts.each do |post| %>
-             <%= cl_image_tag post.image.key, width: 200, height: 150, crop: :fit, :class => "" %>
+          <div class="post">
+            <% @posts.each do |post| %>
+             <%= cl_image_tag post.image.key, crop: :fit, :class => "" %>
             <div>
-              <p><%= post.title %></p>
+              <h5><%= post.title %></h5>
               <p><%= post.body %></p>
             </div>
             <% end %>
