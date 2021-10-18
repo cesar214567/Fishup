@@ -1,0 +1,35 @@
+<div class="banner-bait color-brown" >
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1><strong><%=  @catch.name.capitalize %></strong></h1>
+        <%= cl_image_tag @catch.image.key, width: 200, height: 150, crop: :fit, class: "ml-0" %>
+      </div>
+      <div class="col mt-5 text-white">
+        <div>
+          <h2 class>Description</h2>
+          <hr>
+          <p> <%= @catch.description %></p>
+        </div>
+        <div>
+          <h2 class>Habitat</h2>
+          <hr>
+          <p> <%= @catch.habitat %></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div>
+    <h2 class="mt-3">Recomended baits</h2>
+    <hr>
+    <%= render 'shared/vertical_scrollbar' , :array => @catch.baits, vh:"vh-40" %>
+  </div>
+  <div>
+    <h2 class="mb-3">Spots</h2>
+    <hr>
+    <%= render 'shared/horizontal_scrollbar' , :array => @catch.spots %>
+  </div>
+</div>

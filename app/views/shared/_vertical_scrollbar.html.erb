@@ -1,0 +1,14 @@
+<div class="mb-5">
+  <div class="vertical-scroll vh-100%">
+    <div class="list">
+      <% array.each do |element| %>
+        <% if element.is_a? Catch %>
+          <%= render "shared/catches_card", catch: element %>
+        <% else %>
+          <%= render "shared/baits_card", bait: element %>
+
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

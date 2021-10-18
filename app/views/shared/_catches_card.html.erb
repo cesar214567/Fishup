@@ -1,0 +1,18 @@
+
+<%= link_to catch_path(catch) do %>
+
+  <div class="catch-card mb-3">
+    <div class='anotation'>
+      <p>41</p>
+    </div>
+    <div class="fish-image">
+      <%= cl_image_tag catch.image.key, width: 200, height: 150, crop: :fit %>
+    </div>
+    <div class="catch-info">
+      <h1> <%= catch.name %></h1>
+      <h2>Scientific name: <%= catch.scientific_name %></h2>
+      <p><strong>Description:</strong><%= catch.description %></p>
+      <p>Habitat: <%= catch.habitat %></p>
+    </div>
+  </div>
+<% end %>

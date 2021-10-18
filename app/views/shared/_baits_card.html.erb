@@ -1,0 +1,13 @@
+
+<%= link_to bait_path(bait) do %>
+  <div class="catch-card mb-3">
+    <div class="fish-image">
+      <%= cl_image_tag bait.image.key, width: 200, height: 150, crop: :fit, :class => ""%>
+    </div>
+    <div class="catch-info">
+      <h1> <%= bait.name %></h1>
+      <h2>cost: <%= bait.cost %></h2>
+      <p><strong>Description:</strong><%= bait.description %></p>
+    </div>
+  </div>
+<% end %>

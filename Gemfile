@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.3'
 
+
+gem 'pg_search', '~> 2.3.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 # Use postgresql as the database for Active Record
@@ -36,15 +38,14 @@ gem 'country_select', '~> 6.0'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'
+gem 'dotenv-rails', groups: [:development, :test]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'dotenv-rails', groups: [:development, :test]
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 end
 
