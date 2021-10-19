@@ -12,9 +12,10 @@
 <div class="container vh-60">
   <div class="row">
     <div class="col-5">
-      <h3 class= "subtitle-homepage">Best Community</h3>
+      <h3 class= "subtitle-homepage2">Best Community</h3>
       <hr>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum fuga, omnis ad aspernatur velit id voluptas illum recusandae minus dolorem, similique dolor corporis ex expedita repellat non modi iusto ipsam.</p>
+
     </div>
     <div class="col-2"></div>
       <div class="col-5 cards ">
@@ -49,34 +50,38 @@
     </div>
   </div>
   </div>
-</div>
 
-<div class="container spots-homepage">
+
+
+
+
+<div class=" spots-homepage">
   <h1 class= "subtitle-homepage">Nearby Spots</h3>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-around">
       <div class="card-type-ship">
        <%= link_to spots_path do%>
-       <div>
+       <div class="card-photo">
          <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634329963/Fish%20up/justin-luebke-ARSCXacOtkY-unsplash_lu061e.jpg" %>
       </div>
          <%end %>
         <h5>Muelle de chorrillos </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=tourism"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071056/Fish%20up/ju-on-_zZrmWCGdsg-unsplash_snei3z.jpg" %>
+        <a href="/ships?ship_type=tourism"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071056/Fish%20up/ju-on-_zZrmWCGdsg-unsplash_snei3z.jpg" %></div>
         <h5>La Pampilla’s ro </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=diving"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071054/Fish%20up/ivana-cajina-9W9WSv6JyS8-unsplash_vioikl.jpg" %>
+        <a href="/ships?ship_type=diving"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071054/Fish%20up/ivana-cajina-9W9WSv6JyS8-unsplash_vioikl.jpg" %></div>
         <h5>Las Estrellas’ rocks</h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=leisure"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634330092/Fish%20up/nicolas-jossi-33GscNREhrk-unsplash_lmhr8z.jpg" %>
+        <a href="/ships?ship_type=leisure"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634330092/Fish%20up/nicolas-jossi-33GscNREhrk-unsplash_lmhr8z.jpg" %></div>
         <h5>La defensa’s wall </h5></a>
       </div>
 
     </div>
 </div>
+
 
 
 <div class="container mini-banner-homepage" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/ddlmgs04n/image/upload/v1634329689/Fish%20up/robson-hatsukami-morgan-qr7tsSwDOg0-unsplash_1_hrm3ox.jpg); height: 500px; width: 1100px; border-radius: 12px">
@@ -88,23 +93,5 @@
 </div>
 
 
-
 </div>
-
-
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-muted">© 2021 Fishup Company, Inc</p>
-
-  <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/ar_1:1,b_rgb:f4f4f4,bo_5px_solid_rgb:ffffff,c_fill,g_auto,r_max,w_1000/v1634068982/1_wzkfet.png", style:"height: 60px; width: 55px; margin-left: 5px" %>
-
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
 </div>
