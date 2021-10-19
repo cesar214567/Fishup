@@ -113,10 +113,13 @@
             <% @posts.each do |post| %>
           <div class="post">
              <%= cl_image_tag post.image.key, crop: :fit, :class => "" %>
-            <div>
+            <div class="info-card-post">
               <h5><%= post.title %></h5>
               <p><%= post.body %></p>
-              <p style="font-size: 8px;"><%= post.created_at.strftime("%d de %b del %Y") %></p>
+              <div class="d-flex row justify-content-around p-2">
+              <div><p style="font-size: 8px;"><%= post.created_at.strftime("%d de %b del %Y") %></p></div>
+              <div class="redes-sociales"><i class="fab fa-instagram-square m-1"></i><i class="fab fa-facebook-square m-1"></i><i class="fab fa-twitter-square m-1"></i></div>
+              </div>
             </div>
           </div>
             <% end %>
@@ -129,7 +132,7 @@
                <li class="punto"></li>
              </ul>
            </div>
-        <%= link_to "new post", new_spot_post_path(@spot), style:"    background-color: #466a8e; color: white; padding: 8px; border-radius: 5px; justify-content: center; margin: 0 auto; display: flex; width: 212px;"%>
+        <%= link_to "new post", new_spot_post_path(@spot), style:"background-color: #466a8e; color: white; padding: 8px; border-radius: 5px; justify-content: center; margin: 0 auto; display: flex; width: 212px;"%>
       </div>
     </div>
 

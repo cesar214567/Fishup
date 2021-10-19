@@ -1,5 +1,15 @@
 class PostsController < ApplicationController
   before_action :new_post, only: %i[new create]
+
+  def index
+    @posts = policy_scope(Post).where(user: current_user)
+  end
+
+  def show
+    @post = Post.find(params[:id])
+    authorize @post
+  end
+
   def new
     @spot = Spot.find(params[:spot_id])
     authorize @post
