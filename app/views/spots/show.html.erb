@@ -38,7 +38,7 @@
     <% images_processed.each do |slice| %>
       <div class="column-grid" style="max-width: <%= 100/images_processed.length%>%">
         <% slice.each do |image| %>
-                   <%= cl_image_tag image, width: 200, height: 150, crop: :fit, :style =>"width:100%"%>
+          <%= cl_image_tag image, width: 200, height: 150, crop: :fit, :style =>"width:100%"%>
         <% end %>
       </div>
     <% end %>

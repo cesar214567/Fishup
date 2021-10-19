@@ -1,0 +1,22 @@
+<div class="spot-card d-flex">
+  <div class="spot-img-container">
+    <%= cl_image_tag spot.images.first.key, crop: :fit, class: "ml-0", style:"height: 160px; width:130px" %>
+  </div>
+
+  <div class="spot-info-container">
+    <div class="spot-name">
+      <%= spot.name.capitalize%>
+    </div>
+    <div class="spot-location">
+      <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
+      <strong><%= result[-1] unless result.nil? %>,
+      <%= result[-3] unless result.nil? %></strong></p>
+    </div>
+    <div>
+      <i class="far fa-heart" style="position: relative; right: -408px; top: -88px;"></i>
+    </div>
+    <div class="position: relative; left: -52px; top: -12px; font-size: 15px;">
+      <%=link_to "Check more information", spot_path(spot), style:"background-color: #FCAF3F;color: white;padding: 5px;border-radius: 10px;" %>
+    </div>
+  </div>
+</div>
