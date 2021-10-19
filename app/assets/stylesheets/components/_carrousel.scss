@@ -2,12 +2,14 @@
 
 
 .carrousel {
-  width: 90%;
+  width: 100%;
   max-width: 120em;
   height: fit-content;
   padding: 2em;
   overflow-x:  hidden;
-  background-color: #e5e5e554;
+  background-color: #c9ad9694;
+  // background-color: #bc9d81ce;
+  border-radius: 5px;
 }
 
 .grande {
@@ -19,9 +21,10 @@
   flex-direction: row;
   box-shadow: 2px 2px 3px rgba(180, 180, 180, 0.753);
   padding: 2em;
-
-   transition: all .5s ease;
+  background-color: #e5d6c5;
+   transition: all .4s ease;
    transform: translate(0%) ;
+   border-radius: 14px;
 }
 .carrousel img {
   width: calc(100%/ 2 - 2em);
@@ -48,7 +51,7 @@
 }
 
 .carrousel .punto.activo{
-    background-color: rgb(80, 155, 180);
+    background-color: #466A8D;
     border-radius: 180px;
 }
 
@@ -62,6 +65,7 @@
     margin: 10px;
     width: 440px;
         height: 390px;
+        padding: 20px;
     h5 {
       font-size:28px;
       margin: 10px;
@@ -72,4 +76,8 @@
 }
 .punto {
   list-style: none;
+}
+.punto:hover {
+  background-color: #8f8b8b;
+  transition: 2s ease;
 }

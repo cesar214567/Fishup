@@ -1,75 +1,110 @@
 .card-spot {
-  background-color: white;
-  box-shadow: 2px 2px 3px #cdcdcd;
-  border-radius: 5px;
-  height: 200px;
-  width: 100%;
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  margin-left:20px;
-  margin-bottom: 20px;
+	background-color: white;
+	box-shadow: 2px 2px 3px #cdcdcd;
+	border-radius: 5px;
+	height: 200px;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	margin-left: 20px;
+	margin-bottom: 20px;
 }
 
 .card-spot-name {
-  color: black;
-  font-weight: bold;
-  font-size: large;
-  position: relative;
-  left: -49px;
-  top: -18px;
+	color: black;
+	font-weight: bold;
+	font-size: large;
+	position: relative;
+	left: -49px;
+	top: -18px;
 }
-  .card-spot-location {
-    position: relative;
-    left: -49px;
-    font-size: 12px;
-    font-weight: 200;
-  }
-
-
-
+.card-spot-location {
+	position: relative;
+	left: -49px;
+	font-size: 12px;
+	font-weight: 200;
+}
 
 .bottom-card-spot {
-    background-color: #FCAF3F;
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
-}
-
-
-.filtros {
-    display: flex;
-    justify-content: space-evenly;
-    margin-top: 30px;
-    h6 {
-      background-color: #fcb03fa2;
-      color: white;
-      border-radius: 10px;
-      padding-right: 20px;
-      padding-left: 20px;
-      padding-top: 5px;
-      padding-bottom: 5px;
-
-    }
+	background-color: #fcaf3f;
+	color: white;
+	padding: 5px;
+	border-radius: 10px;
 }
 
 .filtros {
-  h6:hover {
-    box-shadow: 2px 2px 3px rgba(104, 104, 104, 0.726);
-  }
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 0px;
+	h6 {
+		background-color: #fcb03fa2;
+		color: white;
+		border-radius: 10px;
+		padding-right: 20px;
+		padding-left: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
 }
 
+.filtros {
+	h6:hover {
+		box-shadow: 2px 2px 3px rgba(104, 104, 104, 0.726);
+	}
+}
 
-.show-card{
-    display: flex;
-    justify-content: space-between;
+.show-card {
+	display: flex;
+	justify-content: space-between;
 
-    margin-bottom: 25px;
+	margin-bottom: 25px;
 }
 
 .fondo-show-spot {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.08),rgba(255, 255, 255, 0.08)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/a_90/v1634568430/Fish%20up/kiwihug-3gifzboyZk0-unsplash_fso4bn.jpg");
-  background-size:700px;
+
+	background-image: linear-gradient(rgba(255, 255, 255, 0.411),rgba(255, 255, 255, 0.411)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/a_90/v1634568430/Fish%20up/kiwihug-3gifzboyZk0-unsplash_fso4bn.jpg");
+  background-size: 700px;
   width: 100%;
   height: 90vh;
+}
+// this is code for the cards displaying spots in index view
+.spot-card {
+	width: 100%;
+	border-radius: 15px;
+	height: 230px;
+	width: 750px;
+	position: relative;
+	background-color: #fbf9f9;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	.spot-img-container {
+		width: 37%;
+
+		img {
+			width: 100%;
+			height: 200px;
+			border-radius: 10px;
+			margin-right: 10px;
+		}
+	}
+	.spot-info-container {
+		width: 70%;
+		.fa-heart {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+		.fa-thumbs-up {
+			color: rgb(165, 165, 165);
+		}
+	}
+}
+hr {
+	margin: 0;
+	padding: 0;
+	width: 750px;
+
+.fondo-spots{
+  background-color: rgba(225, 206, 170, 0.29);
 }
