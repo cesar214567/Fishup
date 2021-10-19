@@ -8,14 +8,16 @@
   <div class="filtro" ><h6><%=link_to "create new Spot", new_spot_path %></h6></div>
 </div>
 
-<div class="main-container d-flex">
+<div class="d-flex mt-3">
 
-  <div class = "left-container col-4">
-    <%= render "shared/spot_card", spot: Spot.all.first %>
+  <div class = "col-5">
+    <% @spots.each do |spot| %>
+      <%= render "shared/spot_card", spot: spot %>
+    <% end %>
   </div>
 
   <div
-    id="map-spot" class="map-spot col-8"
+    id="map-spot" class="map-spot col-7"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     >

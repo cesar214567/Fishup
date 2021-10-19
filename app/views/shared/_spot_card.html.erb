@@ -1,22 +1,26 @@
 <div class="spot-card d-flex">
   <div class="spot-img-container">
-    <%= cl_image_tag spot.images.first.key, crop: :fit, class: "ml-0", style:"height: 160px; width:130px" %>
+    <%= cl_image_tag spot.images.first.key, crop: :fit, class: "ml-0" %>
   </div>
 
-  <div class="spot-info-container">
-    <div class="spot-name">
+  <div class="spot-info-container d-flex flex-column ml-3">
+    <div class="spot-name mt-3">
+    <h3 class="mt-3">
       <%= spot.name.capitalize%>
-    </div>
-    <div class="spot-location">
-      <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
-      <strong><%= result[-1] unless result.nil? %>,
-      <%= result[-3] unless result.nil? %></strong></p>
-    </div>
+    </h3>
+    </div >
+
+        <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
+
+      <p class="mt-3">
+        <strong><%= result[-1] unless result.nil? %>,
+        <%= result[-3] unless result.nil? %></strong>
+      </p>
     <div>
-      <i class="far fa-heart" style="position: relative; right: -408px; top: -88px;"></i>
+      <i class="far fa-heart fa-2x"></i>
     </div>
-    <div class="position: relative; left: -52px; top: -12px; font-size: 15px;">
-      <%=link_to "Check more information", spot_path(spot), style:"background-color: #FCAF3F;color: white;padding: 5px;border-radius: 10px;" %>
-    </div>
+
+    <p class="mt-auto py-0 mb-0">200 <i class="fas fa-thumbs-up" ></i></p>
   </div>
 </div>
+<hr>
