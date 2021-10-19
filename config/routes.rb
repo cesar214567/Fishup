@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   resources :spots, only: %i[index show new create edit update] do
     resources :posts, only: %i[new create]
-    resources :liked_spots, only: :create
-    resources :voted_spots, only: :create
+    resources :liked_spots, only: [:create,:destroy]
+    resources :voted_spots, only: [:create,:destroy]
   end
   #  resources :catches, only: %i[index]
   resources :catch_spots, only: [] do

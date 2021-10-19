@@ -8,4 +8,12 @@ class VotedSpotsController < ApplicationController
     authorize spot
     redirect_to spot_path(spot)
   end
+
+  def destroy
+    voted_spot = VotedSpot.find(params[:id])
+    authorize voted_spot
+    voted_spot.destroy
+    @spot = voted_spot.spot
+    redirect_to spot_path(@spot)
+  end
 end

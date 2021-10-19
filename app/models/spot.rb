@@ -1,6 +1,8 @@
 class Spot < ApplicationRecord
   has_many_attached :images
   has_many :catch_spots
+  has_many :liked_spots, dependent: :destroy
+  has_many :voted_spots
   has_many :catches, through: :catch_spots
   has_many :voted_spots
   has_many :posts
