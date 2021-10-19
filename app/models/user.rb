@@ -12,7 +12,8 @@ class User < ApplicationRecord
   has_many :posts
   has_many :voted_spots
   has_many :verify_catch_spots
-
+  has_many :liked_spots
+  has_many :spots,through: :liked_spots
 
   def real_address
     "#{address},#{city},#{country}"
