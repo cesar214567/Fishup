@@ -3,6 +3,8 @@ class SpotsController < ApplicationController
     @spots = policy_scope(Spot)
     if params[:query].present?
       @spots = policy_scope(Spot).general_search(params[:query])
+    elsif params[:my_spots].present?
+      @spots = current_user.spots
     end
     @markers = @spots.map do |spot|
       {
