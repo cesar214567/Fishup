@@ -62,11 +62,10 @@
 }
 
 .fondo-show-spot {
-
-	background-image: linear-gradient(rgba(255, 255, 255, 0.411),rgba(255, 255, 255, 0.411)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/a_90/v1634568430/Fish%20up/kiwihug-3gifzboyZk0-unsplash_fso4bn.jpg");
-  background-size: 700px;
-  width: 100%;
-  height: 90vh;
+	background-image: linear-gradient(rgba(255, 255, 255, 0.411), rgba(255, 255, 255, 0.411)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/a_90/v1634568430/Fish%20up/kiwihug-3gifzboyZk0-unsplash_fso4bn.jpg");
+	background-size: 700px;
+	width: 100%;
+	height: 90vh;
 }
 // this is code for the cards displaying spots in index view
 .spot-card {
@@ -104,7 +103,7 @@ hr {
 	margin: 0;
 	padding: 0;
 	width: 750px;
-
-.fondo-spots{
-  background-color: rgba(225, 206, 170, 0.29);
+}
+.fondo-spots {
+	background-color: rgba(225, 206, 170, 0.29);
 }
