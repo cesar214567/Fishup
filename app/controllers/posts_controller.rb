@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   private
+
   def new_post
     @post = Post.new
 

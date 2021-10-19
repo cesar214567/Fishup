@@ -146,6 +146,7 @@ ActiveRecord::Schema.define(version: 2021_10_18_201300) do
   create_table "voted_spots", force: :cascade do |t|
     t.bigint "spot_id", null: false
     t.bigint "user_id", null: false
+    t.boolean "is_favourite"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["spot_id"], name: "index_voted_spots_on_spot_id"

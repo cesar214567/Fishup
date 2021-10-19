@@ -1,6 +1,8 @@
 // Specific CSS for your home-page
-.subtitle-homepage {
+ .subtitle-homepage2 {
+
   margin-top: 100px;
+
 }
 
 .homepage-cards{
@@ -108,10 +110,13 @@
 
 
 .fondo-home-page {
-  background-image: url("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634569334/Fish%20up/mapa-fondo_asikmo.jpg");
+  background-image:linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.09)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634569334/Fish%20up/mapa-fondo_asikmo.jpg");
   // background-size: cover;
   background-position: center;
   object-fit: cover;
   background-size: cover;
-  height: 800px;
+
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
