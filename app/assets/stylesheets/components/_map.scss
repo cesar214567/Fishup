@@ -2,6 +2,7 @@
 // 	width: 280px !important;
 // 	height: 310px !important;
 // }
+
 .mapboxgl-popup.mapboxgl-popup-anchor-bottom {
 	width: 0 !important;
 }
@@ -12,7 +13,6 @@
 	width: 0 !important;
 	padding: 0 !important;
 	.info-card {
-		position: relative;
 		background-color: white;
 		border-radius: 10px;
 		box-sizing: border-box;
@@ -33,8 +33,7 @@
 			height: 60%;
 			padding-bottom: 10px;
 			img {
-				border-top-left-radius: 10px;
-				border-top-right-radius: 10px;
+				border-radius: 15px;
 				width: 100%;
 				height: 100%;
 			}
@@ -58,4 +57,6 @@
 .map-spot {
 	width: 100%;
 	height: 100vh;
+	position: sticky;
+	top: 0;
 }
