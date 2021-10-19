@@ -1,0 +1,14 @@
+
+<%= link_to post_path(post) do %>
+  <div class="catch-card mb-3">
+    <div class="fish-image">
+      <%= cl_image_tag post.image.key, width: 200, height: 150, crop: :fit, :class => ""%>
+    </div>
+    <div class="post-info">
+      <h1> <%= post.title %></h1>
+      <p><h2><%= post.spot.name.capitalize %></h2></p>
+      <p><h2><%= post.catch.name.capitalize %></h2></p>
+      <p><strong>Body:</strong><%= post.body %></p>
+    </div>
+  </div>
+<% end %>

@@ -1,9 +1,11 @@
 
 
   <div class="catch-card mb-3">
-    <div class='anotation'>
-      <p><%= VerifyCatchSpot.count_by_catch_spot_id(relation.id) %></p>
-    </div>
+    <% if verifiable %>
+      <div class='anotation'>
+        <p><%= VerifyCatchSpot.count_by_catch_spot_id(relation.id) %></p>
+      </div>
+    <% end %>
     <div class="fish-image">
     <%= link_to catch_path(catch) do %>
       <%= cl_image_tag catch.image.key, width: 200, height: 150, crop: :fit %>

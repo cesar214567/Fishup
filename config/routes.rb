@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
+
+  resources :posts, only: [:index,:show]
+
   root to: 'pages#home'
   resources :spots, only: %i[index show new create edit update] do
     resources :posts, only: %i[new create]
