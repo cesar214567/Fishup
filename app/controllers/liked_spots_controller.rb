@@ -7,4 +7,12 @@ class LikedSpotsController < ApplicationController
     authorize spot
     redirect_to spot_path(spot)
   end
+
+  def destroy
+    liked_spot = LikedSpot.find(params[:id])
+    authorize liked_spot
+    liked_spot.destroy
+    @spot = liked_spot.spot
+    redirect_to spot_path(@spot)
+  end
 end
