@@ -104,7 +104,20 @@ hr {
 	margin: 0;
 	padding: 0;
 	width: 750px;
-
+}
 .fondo-spots{
   background-color: rgba(225, 206, 170, 0.29);
+}
+
+
+.redes-sociales i, i, i{
+  color: #b1b1b1;
+}
+.redes-sociales i:hover, i:hover, i:hover {
+  color: black;
+}
+
+.info-card-post {
+  display: flex;
+  flex-direction: column;
 }
