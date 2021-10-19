@@ -1,0 +1,26 @@
+<div class="spot-card d-flex">
+  <div class="spot-img-container">
+    <%= cl_image_tag spot.images.first.key, crop: :fit, class: "ml-0" %>
+  </div>
+
+  <div class="spot-info-container d-flex flex-column ml-3">
+    <div class="spot-name mt-3">
+    <h3 class="mt-3">
+      <%= spot.name.capitalize%>
+    </h3>
+    </div >
+
+        <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
+
+      <p class="mt-3">
+        <strong><%= result[-1] unless result.nil? %>,
+        <%= result[-3] unless result.nil? %></strong>
+      </p>
+    <div>
+      <i class="far fa-heart fa-2x"></i>
+    </div>
+
+    <p class="mt-auto py-0 mb-0">200 <i class="fas fa-thumbs-up" ></i></p>
+  </div>
+</div>
+<hr>
