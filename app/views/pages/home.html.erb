@@ -55,27 +55,27 @@
 
 
 
-<div class="container spots-homepage">
+<div class=" spots-homepage">
   <h1 class= "subtitle-homepage">Nearby Spots</h3>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-around">
       <div class="card-type-ship">
        <%= link_to spots_path do%>
-       <div>
+       <div class="card-photo">
          <%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634329963/Fish%20up/justin-luebke-ARSCXacOtkY-unsplash_lu061e.jpg" %>
       </div>
          <%end %>
         <h5>Muelle de chorrillos </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=tourism"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071056/Fish%20up/ju-on-_zZrmWCGdsg-unsplash_snei3z.jpg" %>
+        <a href="/ships?ship_type=tourism"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071056/Fish%20up/ju-on-_zZrmWCGdsg-unsplash_snei3z.jpg" %></div>
         <h5>La Pampilla’s ro </h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=diving"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071054/Fish%20up/ivana-cajina-9W9WSv6JyS8-unsplash_vioikl.jpg" %>
+        <a href="/ships?ship_type=diving"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071054/Fish%20up/ivana-cajina-9W9WSv6JyS8-unsplash_vioikl.jpg" %></div>
         <h5>Las Estrellas’ rocks</h5></a>
       </div>
       <div class="card-type-ship">
-        <a href="/ships?ship_type=leisure"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634330092/Fish%20up/nicolas-jossi-33GscNREhrk-unsplash_lmhr8z.jpg" %>
+        <a href="/ships?ship_type=leisure"><div class="card-photo"><%= image_tag "https://res.cloudinary.com/ddlmgs04n/image/upload/v1634330092/Fish%20up/nicolas-jossi-33GscNREhrk-unsplash_lmhr8z.jpg" %></div>
         <h5>La defensa’s wall </h5></a>
       </div>
 

@@ -1,8 +1,13 @@
 // Specific CSS for your home-page
  .subtitle-homepage2 {
-
+  text-shadow: 2px 2px 2px rgba(150, 148, 148, 0.5);
+  font-weight: normal;
   margin-top: 100px;
 
+}
+.subtitle-homepage{
+  margin-top: 100px;
+  padding: 15px;
 }
 
 .homepage-cards{
@@ -101,10 +106,11 @@
 }
 
 .spots-homepage {
-  background-color: white;
-  box-shadow: 2px 2px 3px rgb(206, 206, 206);
-  width: 100%;
-  border-radius: 12px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 5px rgb(160, 158, 158);
+  width: 80%;
+  border-radius: 8px;
+  margin: 0 auto;
 }
 
 
@@ -119,4 +125,9 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 
+}
+
+.card-photo:hover {
+  box-shadow: 3px 3px 5px black;
+  transition: 4s ease;
 }
