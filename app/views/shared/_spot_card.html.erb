@@ -15,7 +15,18 @@
           <%= result[-3] unless result.nil? %></strong>
         </p>
       <div>
-        <i class="far fa-heart fa-2x"></i>
+
+        <% likedSpot = LikedSpot.exists_by_user_and_spot(current_user.id,spot.id).first %>
+        <% if likedSpot.nil?%>
+          <%= link_to spot_liked_spots_path(spot,map:true),method: "post", class: "text-danger mx-2", remote: true do %>
+            <i class="far fa-heart fa-2x" ></i>
+          <% end %>
+        <% else %>
+          <%= link_to spot_liked_spot_path(spot,likedSpot, map: false),method: "delete", class: "text-danger mx-2", remote: true do %>
+            <i class="fas fa-heart fa-2x text-danger" ></i>
+          <% end %>
+        <% end %>
+
       </div>
 
       <p class="mt-auto py-0 mb-0">200 <i class="fas fa-thumbs-up" ></i></p>
