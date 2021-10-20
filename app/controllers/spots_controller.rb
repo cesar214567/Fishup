@@ -26,7 +26,6 @@ class SpotsController < ApplicationController
     @spot = Spot.new
     @catches = Catch.all
     authorize @spot
-
   end
 
   def create
