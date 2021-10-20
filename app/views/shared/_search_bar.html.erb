@@ -1,8 +1,15 @@
-<%= form_tag path, method: :get do %>
-  <%= text_field_tag :query,
+<%= form_tag path, method: :get, class: "row my-3" do %>
+  <div class="col-auto">
+    <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a spot"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
+    placeholder: "Search by name or fish"
+    %>
+  </div>
+  <div class="col-auto">
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  </div>
+  <div class="col-auto ml-3">
+    <div class="filtro " ><h6><%=link_to "create new Spot", new_spot_path,class:"btn btn-primary" %></h6></div>
+  </div>
 <% end %>

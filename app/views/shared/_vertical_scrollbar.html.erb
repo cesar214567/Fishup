@@ -8,6 +8,8 @@
           <%= render "shared/catches_card", catch: element.catch,verifiable: true, relation: element  %>
         <% elsif element.is_a? Post %>
           <%= render "shared/posts_card", post: element  %>
+        <% elsif element.is_a? Spot %>
+          <%= render "shared/spot_card", spot: element  %>
         <% else %>
           <%= render "shared/baits_card", bait: element %>
         <% end %>
