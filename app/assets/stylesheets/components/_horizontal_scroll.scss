@@ -1,6 +1,7 @@
 .vertical-scroll {
   width:100%;
   overflow-y:scroll;
+  overflow-x:hidden;
   max-height: 100%;
   .list {
     list-style:none;
@@ -26,6 +27,9 @@
 
 .vh-80{
   height: 80vh;
+}
+.vh-90{
+  height: 90vh;
 }
 .vh-60{
   height: 60vh;
