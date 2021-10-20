@@ -45,6 +45,11 @@
   background-size: cover;
   background-position: center;
   margin-top: 60px;
+  margin-bottom: 60px;
+  margin: 0 auto;
+  height: 500px;
+  width: 80%;
+  border-radius: 12px;
 }
 
 .promotion-banner-capitan {
@@ -106,7 +111,7 @@
 }
 
 .spots-homepage {
-  background-color: rgb(255, 255, 255);
+  background-color: #ffffffbd;
   box-shadow: 2px 2px 5px rgb(160, 158, 158);
   width: 80%;
   border-radius: 8px;
@@ -116,18 +121,45 @@
 
 
 .fondo-home-page {
-  background-image:linear-gradient(rgba(0,0,0,0.05),rgba(0,0,0,0.09)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634569334/Fish%20up/mapa-fondo_asikmo.jpg");
-  // background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  background-size: cover;
-
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+//   background-image:linear-gradient(rgba(0,0,0,0.09),rgba(0,0,0,0.09)), url("https://res.cloudinary.com/ddlmgs04n/image/upload/a_180/v1634742205/Fish%20up/descarga_aw39ch.png");
+//   // background-size: cover;
+//   background-position: center;
+//   object-fit: cover;
+//   background-size: cover;
+//   // opacity: 0.9;
+//   // // background-repeat: no-repeat;
+//   // // background-attachment: fixed;
+//  height: 100px;
 
 }
 
 .card-photo:hover {
   box-shadow: 3px 3px 5px black;
   transition: 4s ease;
+}
+
+
+.celular {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.celular-info {
+  h3 {
+    font-size: 35px;
+    margin-top: 40px;
+  }
+  p{
+    margin-top: 30px;
+  }
+}
+
+.img-celular {
+  background-color: #b0becb;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  padding: 20px;
 }
