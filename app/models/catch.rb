@@ -11,4 +11,5 @@ class Catch < ApplicationRecord
     spots:[:name, :loc],
     baits:[:name]
   }, using: {tsearch: {prefix: true}}
+  # paginates_per 4
 end

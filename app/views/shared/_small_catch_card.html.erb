@@ -1,0 +1,33 @@
+<div class="small-catch-card">
+
+  <div class="card-side front">
+
+    <div class="upper-container d-flex justify-content-center">
+      <h2><%= catch.name %></h2>
+    </div>
+    <div class="catch-pic d-flex align-items-center justify-content-center">
+      <%= cl_image_tag catch.image.key %>
+    </div>
+  </div>
+
+  <div class="card-side back">
+    <div class="head d-flex flex-column">
+      <h2 class="align-self-center">Scientific Name</h2>
+        <p class="align-self-center"><%= catch.scientific_name %></p>
+    </div>
+    <ul>
+      <li>Max size:</li>
+      <li>Habitat: <%= catch.habitat %></li>
+      <li>Max size:<%= catch.maximum_size %></li>
+      <li>Min size: <%= catch.minimum_size %></li>
+    </ul>
+
+    <div class="content">
+      <h5>Description</h5>
+      <p><%= catch.description %></p>
+    </div>
+  </div>
+
+</div>
+
+
