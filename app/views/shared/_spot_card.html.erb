@@ -1,4 +1,4 @@
-<div class="spot-card d-flex">
+<div class="spot-card d-flex my-3">
     <div class="spot-img-container">
       <%= cl_image_tag spot.images.first.key, crop: :fit, class: "ml-0" %>
     </div>
@@ -9,11 +9,8 @@
         <%= spot.name.capitalize%>
       </h3>
       </div >
-          <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
-        <p class="mt-3">
-          <strong><%= result[-1] unless result.nil? %>,
-          <%= result[-3] unless result.nil? %></strong>
-        </p>
+        <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
+        <p class="mt-3"><strong><%= result[-1] unless result.nil? %>,<%= result[-3] unless result.nil? %></strong></p>
       <div>
 
         <% likedSpot = LikedSpot.exists_by_user_and_spot(current_user.id,spot.id).first %>

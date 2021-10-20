@@ -1,23 +1,21 @@
 
 <div class="container filtros">
-  <%= render "shared/search_bar", path: spots_path %>
-  <div class="filtro" ><%=link_to "#" do %><h6>Type of water</h6><%end%></div>
-  <div class="filtro" ><%=link_to "#" do %><h6>catches</h6><%end%></div>
-  <div class="filtro" ><%=link_to baits_path do %><h6>Baits</h6><%end%></div>
-  <div class="filtro" ><%=link_to "#" do %><h6>Rating</h6><%end%></div>
-  <div class="filtro" ><h6><%=link_to "create new Spot", new_spot_path %></h6></div>
-</div>
+  </div>
 
-<div class="d-flex mt-3">
+<div class="mx-5 d-flex mt-3">
 
   <div class = "col-5">
-    <% @spots.each do |spot| %>
-      <%= render "shared/spot_card", spot: spot %>
-    <% end %>
+    <div class="inline">
+    <%= render "shared/search_bar", path: spots_path %>
+
+    </div>
+    <%= render "shared/vertical_scrollbar", array: @spots, vh: "vh-90" %>
+
+
   </div>
 
   <div
-    id="map-spot" class="map-spot col-7"
+    id="map-spot" class="col-7 map-spot"
     data-markers="<%= @markers.to_json %>"
     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
     >
