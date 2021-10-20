@@ -8,6 +8,7 @@
     <div class="catch-pic d-flex align-items-center justify-content-center">
       <%= cl_image_tag catch.image.key %>
     </div>
+
   </div>
 
   <div class="card-side back">
@@ -16,10 +17,9 @@
         <p class="align-self-center"><%= catch.scientific_name %></p>
     </div>
     <ul>
-      <li>Max size:</li>
-      <li>Habitat: <%= catch.habitat %></li>
-      <li>Max size:<%= catch.maximum_size %></li>
-      <li>Min size: <%= catch.minimum_size %></li>
+      <li><strong>Habitat: </strong><%= catch.habitat %></li>
+      <li><strong>Max size:</strong><%= catch.maximum_size %></li>
+      <li><strong>Min size: </strong><%= catch.minimum_size %></li>
     </ul>
 
     <div class="content">
