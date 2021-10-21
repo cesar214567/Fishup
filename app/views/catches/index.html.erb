@@ -5,5 +5,7 @@
       <%=   render "shared/small_catch_card", catch: catch %>
     <% end %>
   </div>
-  <%= paginate @catches %>
+  <div class="container d-flex justify-content-center">
+    <%= paginate @catches %>
+  </div>
 </div>

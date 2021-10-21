@@ -8,6 +8,7 @@ body {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
 	gap: 15px;
+	row-gap: 95px;
 }
 
 .small-catch-card {
@@ -17,21 +18,30 @@ body {
 	height: 25rem;
 
 	h2 {
-		margin-bottom: 0;
+		margin-top: 1rem;
+		text-transform: uppercase;
+		font-weight: bold;
 	}
 
 	.front {
 		background-color: white;
 		position: absolute;
+		.upper-container {
+			background-color: #282a48;
+			height: 96px;
+			color: white;
+			text-align: center;
+		}
 		.catch-pic {
 			box-sizing: border-box;
 			/* border: 2px solid red; */
-			height: 100%;
-			width: 100%;
+			height: 80%;
+			width: 80%;
 		}
 		img {
-			width: 300px;
-			height: 250px;
+			// width: 100%;
+			height: 35%;
+			margin-left: 5rem;
 		}
 	}
 
@@ -39,6 +49,17 @@ body {
 		transform: rotateY(180deg);
 		background-color: white;
 		position: absolute;
+		.head {
+			background-color: #282a48;
+			color: white;
+			p {
+				font-size: 24px;
+			}
+		}
+		ul {
+			margin-top: 1rem;
+			list-style: none;
+		}
 		li {
 			margin-right: 10px;
 		}
@@ -46,17 +67,26 @@ body {
 			margin: 0 15px;
 			margin-bottom: 5px;
 		}
+		hr {
+			border: 0;
+			height: 2px;
+			background-image: linear-gradient(to right, transparent, #ccc, transparent);
+		}
 
 		.content {
-			margin-top: 30px;
+			margin-top: 1rem;
 			h5 {
 				margin-left: 15px;
+				text-align: center;
+			}
+			p {
+				padding: 0 20px;
 			}
 		}
 	}
 
 	.card-side {
-		height: 25rem;
+		height: 30rem;
 		transition: all 0.9s ease;
 		position: absolute;
 		top: 0;
