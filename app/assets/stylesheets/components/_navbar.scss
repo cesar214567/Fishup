@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: rgba(15, 66, 0113, 0.78);
+  background: #ffffff;
+  box-shadow: 2px 2px 3px #cbcbcbde;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,9 +13,19 @@
 }
 
 .navbar-medium {
-  display: initial;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: rgba(15, 66, 113, 0.884);
 
   a {
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(15, 66, 0113, 0.78);
+  letter-spacing: 1px;
+  font-weight: 500;
+  padding: 15px;
+  }
+  a:hover {
+    color: rgba(15, 66, 113, 0.37);
+    transition: 2s ease;
   }
 }
