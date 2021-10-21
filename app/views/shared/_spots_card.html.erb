@@ -5,7 +5,7 @@
       <div class="w-100 ">
           <h2 class="my-3 text-center "><%= spot.name %></h2>
           <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
-          <p>Location:<%= result[-1] unless result.nil? %>,<%= result[-3] unless result.nil? %></p>
+          <p><strong>Location:<%= result[-1] unless result.nil? %>,<%= result[-3] unless result.nil? %></strong></p>
           <p><strong>Description:</strong> <%= spot.description %></p>
       </div>
     </div>
