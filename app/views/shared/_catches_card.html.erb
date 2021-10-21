@@ -17,9 +17,11 @@
       <p><strong>Description:</strong><%= catch.description %></p>
       <p>Habitat: <%= catch.habitat %></p>
       <% if verifiable == true && VerifyCatchSpot.exists_by_user_and_catch_spot(current_user.id,relation.id).empty?%>
-        <%= simple_form_for relation, url:catch_spot_verify_catch_spots_path(relation ), method: "post"  do |f| %>
+        <%= simple_form_for relation, url:catch_spot_verify_catch_spots_path(relation ), method: "post",remote: true  do |f| %>
           <%= f.submit "I have fished it!", class: "btn btn-primary" %>
         <% end %>
       <% end %>
     </div>
   </div>
+
+

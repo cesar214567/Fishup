@@ -6,7 +6,11 @@ class VotedSpotsController < ApplicationController
     voted_spots = VotedSpot.new(spot: spot,user: user)
     voted_spots.save
     authorize spot
+    if params[:map]
+      redirect_to spots_path
+    else
     redirect_to spot_path(spot)
+    end
   end
 
   def destroy
