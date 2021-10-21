@@ -2,9 +2,9 @@ class CatchesController < ApplicationController
 
   def index
     if params[:query].present?
-      @catches = policy_scope(Catch.joins(:spots, :baits)).general_search(params[:query])
+      @catches = policy_scope(Catch.joins(:spots, :baits)).general_search(params[:query]).page params[:page]
     else
-      @catches = policy_scope(Catch)
+      @catches = policy_scope(Catch).page params[:page]
     end
   end
 

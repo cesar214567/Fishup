@@ -40,6 +40,7 @@ gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'kaminari'
 
 group :development, :test do  gem 'pry-byebug'
   gem 'pry-rails'
