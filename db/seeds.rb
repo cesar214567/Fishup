@@ -17,12 +17,10 @@ fish_csv = CSV.parse(File.read("catches.csv"), col_sep: "|", converters: :numeri
 baits_csv = CSV.parse(File.read("baits.csv"), col_sep: "|", converters: :numeric)
 bait_catches_csv = CSV.parse(File.read("bait_catches.csv"), col_sep: "|", converters: :numeric)
 
-p fish_csv
-p baits_csv
-p bait_catches_csv
 
 fish_csv.each_with_index do |row, index|
-
+  p index
+  p row[7]
   catch = Catch.create!(name: row[1], description: row[2], habitat: row[3], scientific_name: row[4], minimum_size: row[5], maximum_size: row[6])
 
   catch_image = URI.open(row[7])
@@ -78,21 +76,21 @@ end
 #catch5.image.attach({io: fishpic5, filename:'Atlantic Mahi Mahi',content_type:'image/png'})
 #
 #
-#user1 = User.create!(email:'camgcamg11@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516',  country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new)
-#user1_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user1.avatar.attach({io:user1_avatar, filename:'avatar1', content_type:'image/png'})
-#
-#user2 = User.create!(email:'eduardo@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'miraflores', birth_date: Date.new)
-#user2_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user2.avatar.attach({io:user2_avatar, filename:'avatar2', content_type:'image/png'})
-#
-#user3 = User.create!(email:"felipe@gmail.com", password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'barranco', birth_date: Date.new)
-#user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
-#")
-#user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
-#
+user1 = User.create!(email:'camgcamg11@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516',  country:'Ecuador', city: 'Guayaquil', address:'victor emilio estrada', birth_date: Date.new)
+user1_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user1.avatar.attach({io:user1_avatar, filename:'avatar1', content_type:'image/png'})
+
+user2 = User.create!(email:'eduardo@gmail.com', password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'miraflores', birth_date: Date.new)
+user2_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user2.avatar.attach({io:user2_avatar, filename:'avatar2', content_type:'image/png'})
+
+user3 = User.create!(email:"felipe@gmail.com", password:'123456789', first_name:Faker::Name.first_name , last_name: Faker::Name.last_name  , phone_number:'0997079516', country:'Peru', city: 'Lima', address:'barranco', birth_date: Date.new)
+user3_avatar = URI.open("https://source.unsplash.com/120x120/?avatar
+")
+user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/png'})
+
 #bait_catch = BaitCatch.create!(bait:Bait.first,catch:Catch.first)
 #bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
 #bait_catc3 = BaitCatch.create!(bait:Bait.first,catch:Catch.third)
