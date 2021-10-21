@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :posts, only: %i[new create]
     resources :liked_spots, only: [:create,:destroy]
     resources :voted_spots, only: [:create,:destroy]
+    resources :catch_spots, only: [:new,:create]
   end
   #  resources :catches, only: %i[index]
   resources :catch_spots, only: [] do

@@ -75,7 +75,10 @@
 
   <div>
     <div>
-      <h3 style="margin-top: 1px;">Captures</h3>
+      <div class="d-flex justify-content-between">
+        <h3 style="margin-top: 1px;">Captures</h3>
+        <%= link_to "add a capture",new_spot_catch_spot_path(@spot), class: "btn btn-primary" %>
+      </div>
       <div class="d-flex ">
         <div style="width: 100px; border-bottom: 1px solid black; margin-bottom: 15px"></div>
       </div>
