@@ -28,8 +28,10 @@ fish_csv.each_with_index do |row, index|
 end
 
 baits_csv.each_with_index do |row, index|
+  p index
+  p row[4]
   bait = Bait.create!(cost: row[1], name: row[2], description: row[3])
-  bait_image = URI.open("https://picsum.photos/200/300")
+  bait_image = URI.open(row[4])
   bait.image.attach({io: bait_image, filename: "bait#{index}", content_type: 'image/png'})
 end
 
@@ -95,7 +97,7 @@ user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/pn
 #bait_catc2 = BaitCatch.create!(bait:Bait.first,catch:Catch.second)
 #bait_catc3 = BaitCatch.create!(bait:Bait.first,catch:Catch.third)
 #
-spot1 = Spot.create!(name: "muelle de chorrillos",description: "lugar para obtener carnada y pescar pejerreyes.",latitude: -12.164645558675222, longitude:-77.0299903674119)
+spot1 = Spot.create!(name: "muelle de chorrillos",description: "El Muelle de Chorrillos located in the province of Lima, Peru. It limits to the North with the districts of Barranco and Santiago de Surco. The pier has a beautiful boardwalk which has a great view of the regattas club and you can see the fishing boats in the distance and also the view of the sea. ",latitude: -12.164645558675222, longitude:-77.0299903674119)
 
 
 catch_spot1 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first ,rarity:"Common")
@@ -107,39 +109,39 @@ catch_spot3 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first
 spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
 spot1.images.attach({io:spot_image, filename:'image_spots', content_type:'image/png'})
 
-spot_image2 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
-spot1.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
+#spot_image2 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
+#spot1.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
+#
+#
+#spot_image3 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
+#spot1.images.attach({io:spot_image3, filename:'image_spots3', content_type:'image/png'})
+#
+#spot_image4 = URI.open("https://assets-global.website-files.com/5edf9e74d5a7587412e77dbb/5edf9e74d5a758f8e5e77e4c_port.jpg")
+#spot1.images.attach({io:spot_image4, filename:'image_spots4', content_type:'image/png'})
+#
+#spot_image5 = URI.open("https://images.squarespace-cdn.com/content/v1/5fa365217945492b75932d16/1618976551836-2OPUXXX0ZST7YHR1TQ4L/ports-and-harbours.jpg")
+#spot1.images.attach({io:spot_image5, filename:'image_spots5', content_type:'image/png'})
 
 
-spot_image3 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
-spot1.images.attach({io:spot_image3, filename:'image_spots3', content_type:'image/png'})
-
-spot_image4 = URI.open("https://assets-global.website-files.com/5edf9e74d5a7587412e77dbb/5edf9e74d5a758f8e5e77e4c_port.jpg")
-spot1.images.attach({io:spot_image4, filename:'image_spots4', content_type:'image/png'})
-
-spot_image5 = URI.open("https://images.squarespace-cdn.com/content/v1/5fa365217945492b75932d16/1618976551836-2OPUXXX0ZST7YHR1TQ4L/ports-and-harbours.jpg")
-spot1.images.attach({io:spot_image5, filename:'image_spots5', content_type:'image/png'})
-
-
-
-
-spot2 = Spot.create!(name: "Lago Hermoso",description: "Is a small lake on Argentina, located on Neuquen. You can find diferent species of fish.",latitude: -40.348244645061605, longitude:-71.519812218733)
-spot_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071059/Fish%20up/joe-pohle-BKTXvgH3IRc-unsplash_hvz0vu.jpg")
-spot2.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
-
-
-CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first ,rarity:"Common")
-CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
-CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
-
-
-spot3 = Spot.create!(name: "Lago Nahuel Huapi",description: "Is a huge lake on the south of Argentina, located on Bariloche, Rio Grande. You can find diferent species of fish. Great place to go fishing",latitude: -40.90623084689651, longitude:-71.514833479767)
-spot_image3 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634228260/Fish%20up/kyle-johnson-TEZZzuQTt8g-unsplash_qjbci2.jpg")
-spot3.images.attach({io:spot_image3, filename:'image_spots2', content_type:'image/png'})
-
-CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first ,rarity:"Common")
-CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Common")
-CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Common")
+#
+#
+#spot2 = Spot.create!(name: "Lago Hermoso",description: "Is a small lake on Argentina, located on Neuquen. You can find diferent species of fish.",latitude: -40.348244645061605, longitude:-71.519812218733)
+#spot_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071059/Fish%20up/joe-pohle-BKTXvgH3IRc-unsplash_hvz0vu.jpg")
+#spot2.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
+#
+#
+#CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first ,rarity:"Common")
+#CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
+#CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
+#
+#
+#spot3 = Spot.create!(name: "Lago Nahuel Huapi",description: "Is a huge lake on the south of Argentina, located on Bariloche, Rio Grande. You can find diferent species of fish. Great place to go fishing",latitude: -40.90623084689651, longitude:-71.514833479767)
+#spot_image3 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634228260/Fish%20up/kyle-johnson-TEZZzuQTt8g-unsplash_qjbci2.jpg")
+#spot3.images.attach({io:spot_image3, filename:'image_spots2', content_type:'image/png'})
+#
+#CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first ,rarity:"Common")
+#CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Common")
+#CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Common")
 
 #
 ## post1 = Post.create!(title: "Big Fish on the South", body:"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere voluptatibus natus m.")
