@@ -1,0 +1,9 @@
+<div class="d-flex justify-content-center">
+  <div class="col-6">
+    <%= simple_form_for [@spot,@catch_spot], :class => "form-group" do |f| %>
+      <%= f.association :spot, :class => "form-control"%>
+      <%= f.association :catch, :class => "form-control"%>
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
