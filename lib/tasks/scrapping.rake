@@ -7,14 +7,17 @@ task :scrapping do
   fish_csv = CSV.open("catches.csv", "wb", col_sep: "|")
   baits_csv = CSV.open("baits.csv", "wb", col_sep: "|")
   bait_catches_csv = CSV.open("bait_catches.csv", "wb", col_sep: "|")
-
+  GOOGLE_URL = "https://www.google.com/search?q=<change>&source=lnms&tbm=isch&sa=X&ved=2ahUKEwiC5prTqNzzAhXOHLkGHQqdBNcQ_AUoAXoECAEQAw&biw=1853&bih=949&dpr=1"
   # hash having all baits
   table = CSV.parse(File.read("baits2.csv")).flatten
   table.each_with_index do |name, index|
+    google_search = GOOGLE_URL.gsub("<change>", "#{name.split.join('+')}+carnada")
+    google_content = URI.open(google_search).read
+    google_doc = Nokogiri::HTML(google_content)
+    image = google_doc.search("img")[2].attr('src')
     per_statement = ["dozen", "bag", "kilogram"]
-    baits_csv << [index + 1, "#{rand(5)+1} dollars per #{per_statement.sample}", name, "best bait to fish"]
+    baits_csv << [index + 1, "#{rand(5)+1} dollars per #{per_statement.sample}", name, "best bait to fish",image]
   end
-
   URL ='https://biodiversidadacuatica.imarpe.gob.pe/Catalogo/Grupos_Biologicos?id=127'
   URL_IMAGES = "https://biodiversidadacuatica.imarpe.gob.pe"
   URL_FISH = 'https://biodiversidadacuatica.imarpe.gob.pe/Catalogo/Especie?id='

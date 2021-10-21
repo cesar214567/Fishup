@@ -19,4 +19,8 @@ class Catch < ApplicationRecord
     end
   end
   paginates_per 9
+
+  def to_label
+    "#{name}"
+  end
 end
