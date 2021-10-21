@@ -97,9 +97,11 @@ user3.avatar.attach({io:user3_avatar, filename:'avatar3', content_type:'image/pn
 #
 spot1 = Spot.create!(name: "muelle de chorrillos",description: "lugar para obtener carnada y pescar pejerreyes.",latitude: -12.164645558675222, longitude:-77.0299903674119)
 
+
 catch_spot1 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first ,rarity:"Common")
 catch_spot2 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first,rarity:"Common")
 catch_spot3 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first,rarity:"Common")
+
 
 
 spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
@@ -125,6 +127,7 @@ spot2 = Spot.create!(name: "Lago Hermoso",description: "Is a small lake on Argen
 spot_image2 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071059/Fish%20up/joe-pohle-BKTXvgH3IRc-unsplash_hvz0vu.jpg")
 spot2.images.attach({io:spot_image2, filename:'image_spots2', content_type:'image/png'})
 
+
 CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first ,rarity:"Common")
 CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
 CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Common")
@@ -133,7 +136,6 @@ CatchSpot.create!(spot: spot2, catch:Catch.order('RANDOM()').first,rarity:"Commo
 spot3 = Spot.create!(name: "Lago Nahuel Huapi",description: "Is a huge lake on the south of Argentina, located on Bariloche, Rio Grande. You can find diferent species of fish. Great place to go fishing",latitude: -40.90623084689651, longitude:-71.514833479767)
 spot_image3 = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634228260/Fish%20up/kyle-johnson-TEZZzuQTt8g-unsplash_qjbci2.jpg")
 spot3.images.attach({io:spot_image3, filename:'image_spots2', content_type:'image/png'})
-
 
 CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first ,rarity:"Common")
 CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Common")
@@ -149,5 +151,6 @@ CatchSpot.create!(spot: spot3, catch:Catch.order('RANDOM()').first,rarity:"Commo
 ## post2.image.attach({io:post_image2, filename:'image_post2',content_type:'image/png'})
 #
 #
+
 
 puts "all done!"

@@ -2,8 +2,8 @@
 
   <div class="card-side front">
 
-    <div class="upper-container d-flex justify-content-center">
-      <h2><%= catch.name %></h2>
+    <div class="upper-container d-flex justify-content-center align-items-center">
+      <h2 ><%= catch.name %></h2>
     </div>
     <div class="catch-pic d-flex align-items-center justify-content-center">
       <%= cl_image_tag catch.image.key %>
@@ -21,9 +21,9 @@
       <li><strong>Max size:</strong><%= catch.maximum_size %></li>
       <li><strong>Min size: </strong><%= catch.minimum_size %></li>
     </ul>
-
+    <hr>
     <div class="content">
-      <h5>Description</h5>
+      <h5><strong> Description</strong></h5>
       <p><%= catch.description %></p>
     </div>
   </div>
