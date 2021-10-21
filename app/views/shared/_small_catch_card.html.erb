@@ -11,23 +11,21 @@
 
   </div>
 
-  <div class="card-side back">
+  <div class="card-side back ">
     <div class="head d-flex flex-column">
       <h2 class="align-self-center">Scientific Name</h2>
         <p class="align-self-center"><%= catch.scientific_name %></p>
     </div>
-    <ul>
+    <ul class="vertical-scroll">
       <li><strong>Habitat: </strong><%= catch.habitat %></li>
       <li><strong>Max size:</strong><%= catch.maximum_size %></li>
       <li><strong>Min size: </strong><%= catch.minimum_size %></li>
     </ul>
     <hr>
-    <div class="content">
+    <div class="content vertical-scroll">
       <h5><strong> Description</strong></h5>
       <p><%= catch.description %></p>
     </div>
   </div>
 
 </div>
-
-
