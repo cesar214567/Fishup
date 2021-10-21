@@ -13,23 +13,23 @@
       <div class="d-flex justify-content-between">
         <% votedSpot = VotedSpot.exists_by_user_and_spot(current_user.id,@spot.id).first %>
         <% if votedSpot.nil?%>
-          <%= link_to spot_voted_spots_path(@spot),method: "post", class: "text-danger mx-2" do%>
+          <%= link_to spot_voted_spots_path(@spot),method: "post", class: "text-danger mx-2", remote: true do%>
             <i class="far fa-thumbs-up fa-2x "></i>
           <% end %>
         <% else %>
-          <%= link_to spot_voted_spot_path(@spot,votedSpot),method: "delete", class: "text-danger mx-2" do%>
-            <i class="fas fa-thumbs-up fa-2x "></i>
+          <%= link_to spot_voted_spot_path(@spot,votedSpot),method: "delete", class: "text-danger mx-2", remote: true do%>
+            <i class="fas fa-thumbs-up fa-2x text-danger"></i>
           <% end %>
 
         <% end %>
         <% likedSpot = LikedSpot.exists_by_user_and_spot(current_user.id,@spot.id).first %>
         <% if likedSpot.nil?%>
-          <%= link_to spot_liked_spots_path(@spot),method: "post", class: "text-danger mx-2" do %>
+          <%= link_to spot_liked_spots_path(@spot),method: "post", class: "text-danger mx-2", remote: true do %>
             <i class="far fa-heart fa-2x" ></i>
           <% end %>
         <% else %>
-          <%= link_to spot_liked_spot_path(@spot,likedSpot),method: "delete", class: "text-danger mx-2" do %>
-            <i class="fas fa-heart fa-2x" ></i>
+          <%= link_to spot_liked_spot_path(@spot,likedSpot),method: "delete", class: "text-danger mx-2", remote: true do %>
+            <i class="fas fa-heart fa-2x text-danger" ></i>
           <% end %>
         <% end %>
       </div>

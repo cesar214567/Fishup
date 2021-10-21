@@ -1,8 +1,17 @@
 <%= link_to spot_path(spot) do%>
 <div class="info-card">
   <div class="info-card-image">
-  <%= cl_image_tag spot.images.first.key %>
-  <i class="fas fa-heart fa-2x"></i>
+    <%= cl_image_tag spot.images.first.key %>
+    <% likedSpot = LikedSpot.exists_by_user_and_spot(current_user.id,spot.id).first %>
+    <% if likedSpot.nil?%>
+      <%= link_to spot_liked_spots_path(spot,map:true),method: "post", class: "text-danger mx-2", remote: true do %>
+        <i class="far fa-heart fa-2x" ></i>
+      <% end %>
+    <% else %>
+      <%= link_to spot_liked_spot_path(spot,likedSpot, map: false),method: "delete", class: "text-danger mx-2", remote: true do %>
+        <i class="fas fa-heart fa-2x text-danger" ></i>
+      <% end %>
+    <% end %>
   </div>
   <div class="spot-info">
     <p> 200 <i class="fas fa-thumbs-up" style="color:crimson;"></i></p>

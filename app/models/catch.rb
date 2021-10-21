@@ -18,4 +18,5 @@ class Catch < ApplicationRecord
       self.description = "no description"
     end
   end
+  # paginates_per 4
 end

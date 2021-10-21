@@ -1,4 +1,9 @@
 <div class="container">
-  <%= render 'shared/search_bar', path: catches_path %>
-  <%= render "shared/vertical_scrollbar", array: @catches, vh: "vh-80" %>
+
+  <div class="grid-container">
+    <% @catches.each do |catch| %>
+      <%=   render "shared/small_catch_card", catch: catch %>
+    <% end %>
+  </div>
+  <%= paginate @catches %>
 </div>
