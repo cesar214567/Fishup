@@ -32,10 +32,10 @@ class SpotsController < ApplicationController
     @spot = Spot.new(spot_params)
     authorize @spot
     if @spot.save
-      catches = params[:spot][:catch_ids]
-      catches.each do |catch_id|
-        CatchSpot.create(spot: @spot, catch_id: catch_id)
-      end
+      #catches = params[:spot][:catch_ids]
+      #catches.each do |catch_id|
+      #  CatchSpot.create(spot: @spot, catch_id: catch_id)
+      #end
       redirect_to spot_path(@spot)
     else
       render :new
