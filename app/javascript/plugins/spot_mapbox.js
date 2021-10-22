@@ -7,7 +7,7 @@ const declareMap = (geocordinates, mapSpot, mapElement) => {
 		container: "map-spot",
 		style: "mapbox://styles/cesar21456/ckufny7yg2pjl17pf3u56bc9e",
 		center: geocordinates, // starting position
-		zoom: 3, // starting zoo
+		zoom: 6, // starting zoo
 	});
 	mapSpot.on("idle", function () {
 		mapSpot.resize();
