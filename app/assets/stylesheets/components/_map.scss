@@ -56,6 +56,10 @@ svg {
 			top: 12px;
 			right: 15px;
 		}
+		.active {
+			color: #fd1015;
+			text-shadow: 1px 2px 3px grey;
+		}
 		// border: 1px solid crimson;
 		.info-card-image {
 			position: relative;

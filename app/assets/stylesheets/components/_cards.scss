@@ -1,191 +1,183 @@
 .card-type-ship {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 200px;
-  h5 {
-    text-align: center;
-    padding: 15px;
-  }
-  a {
-    color: black;
-    font-weight: lighter;
-  }
-  img{
-    width: 220px;
-    height: 220px;
-    border-radius: 25px;
-    padding: 13px;
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 200px;
+	h5 {
+		text-align: center;
+		padding: 15px;
+	}
+	a {
+		color: black;
+		font-weight: lighter;
+	}
+	img {
+		width: 220px;
+		height: 220px;
+		border-radius: 25px;
+		padding: 13px;
+	}
 }
-}
-
 
 .cards {
-  margin-top: 60px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: space-between;
-  margin-bottom: 90px;
-  .card{
-    width: 200px;
-    height: 260px;
-    overflow: hidden;
-  }
-  img {
-    height: 60%;
-  }
+	margin-top: 60px;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	justify-content: space-between;
+	margin-bottom: 90px;
+	.card {
+		width: 200px;
+		height: 260px;
+		overflow: hidden;
+	}
+	img {
+		height: 60%;
+	}
 }
 
-
 .cards-type-ships-padre {
-  display: flex;
-  grid-gap: 15px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+	display: flex;
+	grid-gap: 15px;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .cards-type-ships-padre {
-    grid-template-columns: 1fr 1fr;
-  }
+	.cards-type-ships-padre {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .cards-type-ships-padre {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.cards-type-ships-padre {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .cards-type-ships-padre {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.cards-type-ships-padre {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .cards-type-ships-padre {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.cards-type-ships-padre {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .cards-type-ships-padre {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.cards-type-ships-padre {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
-
-
-
-
 .card-trip {
-  overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  width: 400px;
-  height: 300px;
-  border-radius: 12px;
-  margin: 15px;
-  text-decoration: none;
+	overflow: hidden;
+	background: white;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	width: 400px;
+	height: 300px;
+	border-radius: 12px;
+	margin: 15px;
+	text-decoration: none;
 }
 
 .card-trip > img {
-  height: 200px;
-  width: 100%;
-  object-fit: cover;
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
 }
 
 .card-trip h2 {
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
+	font-size: 16px;
+	font-weight: bold;
+	margin: 0;
 }
 
 .card-trip p {
-  font-size: 16px;
-  opacity: .7;
-  margin: 0;
+	font-size: 16px;
+	opacity: 0.7;
+	margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-  h2 {
-    color: black;
-    font-size: 24px;
-  }
-  p{
-    color: black;
-    font-size: 16px;
-  }
+	padding: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: relative;
+	h2 {
+		color: black;
+		font-size: 24px;
+	}
+	p {
+		color: black;
+		font-size: 16px;
+	}
 }
 
 .card-trip-infos .card-trip-user {
-  position: absolute;
-  right: 16px;
-  top: -20px;
-  width: 40px;
+	position: absolute;
+	right: 16px;
+	top: -20px;
+	width: 40px;
 }
 
 .best-expericies-cards {
-  display: grid;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  grid-gap: 10px;
+	display: grid;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	grid-gap: 10px;
 }
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-  .best-expericies-cards {
-    grid-template-columns: 1fr 1fr;
-  }
+	.best-expericies-cards {
+		grid-template-columns: 1fr 1fr;
+	}
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .best-expericies-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.best-expericies-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .best-expericies-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.best-expericies-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .best-expericies-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.best-expericies-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .best-expericies-cards {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+	.best-expericies-cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
 }
 
-
 .card-title {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .card-text {
-  font-weight: lighter;
-  font-size: 12px;
+	font-weight: lighter;
+	font-size: 12px;
 }
