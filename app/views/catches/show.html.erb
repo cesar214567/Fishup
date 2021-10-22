@@ -6,12 +6,12 @@
         <%= cl_image_tag @catch.image.key, width: 200, height: 150, crop: :fit, class: "ml-0" %>
       </div>
       <div class="col-6  text-white">
-        <div class="vertical-scroll h-50">
+        <div class="vertical-scroll h-25">
           <h2 class>Description</h2>
           <hr>
           <p> <%= @catch.description %></p>
         </div>
-        <div class="vertical-scroll h-50">
+        <div class="vertical-scroll h-25">
           <h2 class>Habitat</h2>
           <hr>
           <p> <%= @catch.habitat %></p>
