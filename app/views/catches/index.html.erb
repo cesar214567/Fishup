@@ -1,5 +1,5 @@
 <div class="container">
-
+ <%= render 'shared/search_bar', path: catches_path %>
   <div class="grid-container">
     <% @catches.each do |catch| %>
       <%=   render "shared/small_catch_card", catch: catch %>
