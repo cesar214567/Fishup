@@ -1,8 +1,8 @@
 <%= link_to spot_path(spot) do  %>
   <div class="card-trip inline">
     <%= image_tag "https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/#{spot.longitude},#{spot.latitude},14.25,0,60/300x300?access_token=#{ENV['MAPBOX_API_KEY']}" %>
-    <div class="card-trip-infos vertical_scroll">
-      <div class="w-100 ">
+    <div class="card-trip-infos h-50">
+      <div class="w-100 vertical-scroll">
           <h2 class="my-3 text-center "><%= spot.name %></h2>
           <% result =  spot.loc.nil? ? nil : spot.loc.split(",") %>
           <p><strong>Location:<%= result[-1] unless result.nil? %>,<%= result[-3] unless result.nil? %></strong></p>
