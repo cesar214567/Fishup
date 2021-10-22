@@ -1,7 +1,7 @@
 class BaitsController < ApplicationController
   def index
     if params[:query].present?
-      @baits = policy_scope(Bait.joins(:catches)).general_search(params[:query])
+      @baits = policy_scope(Bait).general_search(params[:query])
     else
       @baits = policy_scope(Bait)
     end
