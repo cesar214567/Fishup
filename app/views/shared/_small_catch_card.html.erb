@@ -10,7 +10,7 @@
     </div>
 
   </div>
-
+    <%= link_to catch_path(catch) do %>
   <div class="card-side back ">
     <div class="head d-flex flex-column">
       <h2 class="align-self-center">Scientific Name</h2>
@@ -27,5 +27,6 @@
       <p><%= catch.description %></p>
     </div>
   </div>
+  <% end %>
 
 </div>
