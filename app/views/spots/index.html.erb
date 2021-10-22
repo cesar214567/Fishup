@@ -1,15 +1,15 @@
 
-<div class="container filtros">
+<div class="container ">
+    <div class="inline">
+    <%= render "shared/search_bar", path: spots_path %>
+
+    </div>
   </div>
 
 <div class="mx-5 d-flex mt-3">
 
   <div class = "col-5">
-    <div class="inline">
-    <%= render "shared/search_bar", path: spots_path %>
-
-    </div>
-    <%= render "shared/vertical_scrollbar", array: @spots, vh: "vh-90" %>
+    <%= render "shared/vertical_scrollbar", array: @spots, vh: "vh-100" %>
 
 
   </div>
