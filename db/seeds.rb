@@ -106,7 +106,7 @@ catch_spot3 = CatchSpot.create!(spot: spot1, catch:Catch.order('RANDOM()').first
 
 
 
-spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634071063/Fish%20up/eberhard-grossgasteiger-DmIJbj6-3-c-unsplash_qn32kw.jpg")
+spot_image = URI.open("https://res.cloudinary.com/ddlmgs04n/image/upload/v1634912033/Fish%20up/pat-whelen-m0EUEdxREiU-unsplash_orcbvq.jpg")
 spot1.images.attach({io:spot_image, filename:'image_spots', content_type:'image/png'})
 
 #spot_image2 = URI.open("https://cdn.britannica.com/84/114584-004-E624BA53/Yachting-harbour-Lorient-France.jpg")
