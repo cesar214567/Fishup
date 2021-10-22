@@ -14,7 +14,7 @@
     <% end %>
   </div>
   <div class="spot-info vertical-scroll">
-    <p> 200 <i class="fas fa-thumbs-up" style="color:crimson;"></i></p>
+    <p> <%= VotedSpot.count_by_spot_id(spot.id) %> <i class="fas fa-thumbs-up" ></i></p>
     <h3><%=spot.name%></h3>
     <p><%= spot.description %></p>
   </div>
