@@ -45,7 +45,7 @@ svg {
 	padding: 0 !important;
 	.info-card {
 		background-color: white;
-		border-radius: 10px;
+		border-radius: 15px;
 		box-sizing: border-box;
 		width: 280px;
 		height: 310px;
@@ -75,6 +75,7 @@ svg {
 		}
 		.spot-info {
 			color: black;
+      height: 35%;
 			p {
 				text-align-last: left;
 				padding-left: 5px;
